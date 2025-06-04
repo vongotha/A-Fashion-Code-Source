@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size Chart</title>
+    <script src="/scripts/sizechart.js" type="module" defer></script>
+    <script src="/scripts/function.js" type="module" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/styles/C-lowerContent.css">
+    <link rel="stylesheet" href="/styles/C-footer.css">
+    <link rel="stylesheet" href="/styles/C-menu.css">
+    <link rel="stylesheet" href="/styles/sizeChart.css">
+    <link rel="stylesheet" href="/styles/C-table.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+</head>
+<body>
+    <div class="navigation"> 
+        <div class="logo">
+            <a href="../html/index.html">
+                <img src="../images/logos/Logo A-Fashion Resized.png" alt="logo">
+            </a>
+        </div>
+        <nav class="navbar">
+            <a href="/index.html" class="home" class="active">Home</a>
+            <a href="/html/size.html" class="sizes">Size Guide</a>
+            <a href="/html/contact.html" class="contact">Contact Us</a>
+        </nav>
+        <div class="buttons">
+            <button onclick="window.location.href='../html/size.html';" class="getSized">Get Sized</button>
+            <!--<a href="../html/size.html" class="getsized">Get Sized</a>-->
+        </div>
+    </div>
+
+    <div class="content">
+
+        <div class="itemProfile">
+
+            <div id="itemImage"></div>
+
+            <div class="itemInfos">
+                <div class="nameLink">
+                    <h3 id="itemName">Top Men</h3>
+                    <a href="">
+                        <img src="../images/Background/chart-link-icon.png" alt="link icon">
+                    </a>
+                </div>
+                <h3 id="itemCategory">Category: Top</h3>
+                <p class="infos">
+                    And, if your next adventure in color is
+                    establishing a palette for your brand, look no 
+                    further than our color palette generator.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="table">
+
+            <div class="filterTable">
+                <select name="brands" id="brand-select">
+                    <option value="">All</option>
+                    <option value="Nike">Nike</option>
+                    <option value="Adidas">Adidas</option>
+                    <option value="Asos">Asos</option>
+                    <option value="H&M">H&M</option>
+                    <option value="Zara">Zara</option>
+                </select>
+    
+                <select name="units" id="units-select">
+                    <option value="Inch">Imperial (in)</option>
+                    <option value="Inch">Metric (cm)</option>
+                </select>
+            </div>
+
+            <div id="tableContainer">
+                <table></table>
+            </div>
+        </div>
+
+        <div class="describe-container">
+            <div class="links">
+                <div class="describeTabA">
+                    Description
+                </div>
+                <div class="describeTabB">
+                    How to measure
+                </div>
+            </div>
+            
+            <p class="describe-content">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda nemo obcaecati dolorum voluptatem consequatur est odio repellat rerum eveniet, quidem quam non dignissimos reprehenderit, sequi rem eos animi sapiente cupiditate.
+            </p>
+
+            <p class="howTomeasure-content" class="hidden">
+                Read on to find thirty color palettes for a variety of industries, along with ten
+                website mockups to help you visualize your own website palette. Read on to find thirty color palettes for a variety of industries, along with ten website mockups to help you visualize your own website palette.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="lowerContent">
+        <div class="suggestions">
+            <h2>You May also like</h2>
+            <div class="arrows">
+                <div class="arrow-left"></div>
+                <div class="arrow-right"></div>
+            </div>
+        </div>
+
+        <div class="miniCarousel" id="miniCarousel"></div>
+
+    </div>
+
+    <footer>
+
+        <div class="h-footer">
+            <div class="company">
+                <div class="logocompany"></div>
+                <h4>
+                    Unlock your perfect fit online;
+                    accurate size guides are the key to shopping with
+                    confidence and leaving returns behind.
+                </h4>
+            </div>
+    
+            <div class="footMenu">
+                <p>Menu</p>
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="../html/size.html">
+                    Size Guide
+                </a>
+
+                <a href="../html/contact.html">
+                    Contact
+                </a>
+            </div>
+            
+            <div class="footservices">
+                <p>
+                    Services
+                </p>
+                <a href="/html/size.html">
+                    Size Guide
+                </a>
+
+                <a href="/html/faq.html">
+                    FAQ
+                </a>
+
+                <a href="/html/howTomeasure.html">
+                    How to Measure
+                </a>
+            </div>
+
+            <div class="contacts">
+
+                <div class="social">
+                    <a href="">
+                        <div class="instagram">
+                        </div>
+                    </a>
+                    
+                    <a href="">
+                        <div class="facebook">
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="twitter">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="iconsText">
+                    <div class="icons">
+                        <div class="location"></div>
+                        <div class="mail"></div>
+                        <div class="number"></div>
+                    </div>
+    
+                    <div class="textFooter">
+                       <p>Kinshasa, 147 Gombe</p>
+                       <p>afashion@mail.com</p>
+                       <p>+243 887 654 220</p> 
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <hr>
+        <div class="l-footer">
+            
+            <p>Coppyright@2025</p>
+            
+            <a href="0">
+                <p>Privacy & Policy</p>
+            </a>
+        </div>
+
+    </footer>
+
+</body>
+</html>
