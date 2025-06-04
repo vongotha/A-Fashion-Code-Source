@@ -1,0 +1,55 @@
+#tableContainer {
+  min-height: 200px;
+  border-radius: 15px;
+}
+
+.table {
+  overflow-y: auto;
+  height: 500px;
+}
+
+caption {
+  color: #414141;
+  padding: 10px 0;
+  font-style: italic;
+  font-size: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #f8f8f8;
+}
+
+thead {
+  background-color: #414141;
+  color: white;
+}
+
+th {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+tbody th[scope="row"] {
+  font-weight: bold;
+  background-color: #eee;
+}

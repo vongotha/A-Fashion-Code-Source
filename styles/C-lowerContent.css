@@ -1,0 +1,189 @@
+/* LOWER CONTENT STYLIZING */
+* {
+    font-family: 'Signika', sans-serif;
+}
+.lowerContent {
+    position: relative;
+    margin: 0;
+    height: 400px;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #D9D9D9;
+}
+
+.lowerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.lowerContent h2 {
+    font-size: 36px;
+    font-weight: 400;
+    color: #414141;
+}
+
+.arrows {
+    width: 120px;
+    height: 45px;
+}
+
+.arrows {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.arrow-left {
+    width: 50px;
+    height: 45px;
+    cursor: pointer;
+    background: no-repeat center center / cover url(../images/Background/size-left-arrow.png);
+    opacity: 30%;
+}
+
+.arrow-right {
+    width: 50px;
+    height: 45px;
+    cursor: pointer;
+    background: no-repeat center center / cover url(../images/Background/size-right-arrow.png);
+    opacity: 30%;
+}
+
+.arrow-left:hover, .arrow-right:hover {
+    opacity: 90%;
+    transition: all 0.2s ease-in-out;
+}
+
+.suggestions {
+    width: 1215px;
+    height: 45px;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.miniCarousel {
+    width: 1066px;
+    height: 290px;
+    margin-left: 106px;
+}
+.item1 {
+    width: 250px;
+    height: 288px;
+    align-items: center;
+}
+.slick-slide .item1 {
+  width: 250px !important;
+  display: block !important; /* Ou display: flex !important; si vous utilisiez Flexbox */
+}
+
+.lurre:hover {
+    background-color: #8685ef;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 0px 10px #8685ef;
+}
+
+.info {
+    width: 250px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+.info button {
+    border: none;
+    width: 104px;
+    height: 27px;
+    background-color: #8685ef;
+    border: none;
+    color: #FAF7FF;
+    font-size: 15px;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.info button:hover {
+    background-color: #FAF7FF;
+    color: #8685ef;
+    box-shadow: 0 0 10px #8685ef;
+    transition: all 0.2s ease-in-out;
+}
+
+.info h4 {
+    margin: 0;
+    font-family: 'Signika', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    color: #414141;
+}
+
+.info h5 {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    color: #414141;
+}
+
+.lurre {
+    width: 250px;
+    height: 200px;
+    background-color: #F9F7F7;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.itemImg {
+    width: 250px;
+    height: 200px;
+}
+
+.slides {
+    width: 180px;
+    height: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.slides div:hover {
+    box-shadow: 0px 0px 10px #414141;
+    opacity: 80%;
+}
+.slides div {
+    width: 20px;
+    height: 20px;
+    background-color: #FAF7FF;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slides div:first-child {
+    background-color: #8685ef;
+}
+.slides div:active {
+    background-color: #8685ef;
+}
+
+.first {
+    background-color:lightgrey;
+    width: 200px;
+    height: 180px;
+    border-radius: 20px;
+}
+.first:hover {
+    background-color: #FAF7FF;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0px 0px 10px #595767;
+}
+
+.first-img {
+    width: 200px;
+    height: 180px;
+}
