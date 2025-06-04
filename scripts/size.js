@@ -55,7 +55,6 @@ checkboxes.forEach(function(checkbox) {
     updateMainContent()
   });
 });
-console.log(searchInput)
 
 searchInput.addEventListener('keyup', function (event) {
   const searchText = searchInput.value

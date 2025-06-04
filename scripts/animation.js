@@ -29,7 +29,6 @@ const observerScale = new IntersectionObserver((entries) => {
         }
     }
 })
-
 const fadeIn = new IntersectionObserver((entries) => {
     for (const entry of entries) {
         if (entry.isIntersecting) {
