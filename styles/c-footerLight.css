@@ -1,0 +1,190 @@
+footer {
+    height: 250px;
+    background-color: #d9d9d9;
+    flex-shrink: 0;
+}
+
+.h-footer {
+    height: 312px;
+    width: auto;
+    background-color: #d9d9d9;
+}
+
+.h-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
+.company {
+    width: 300px;
+    height: 192px;
+}
+
+.company h4 {
+    font-family: 'Nunito Sans' sans-serif;
+    font-size: 15px;
+    font-weight: 100;
+    text-align: left;
+    max-width: 200px;
+    line-height: 130%;
+    color: #414141;
+    margin: 0;
+}
+
+.logocompany {
+    width: 300px;
+    height: 100px;
+    background:  no-repeat center center / cover url(../images/Background/Logo\ A-Fashion.png);
+}
+
+.footMenu {
+    width: 161px;
+    height: 223px;
+}
+
+.footMenu p {
+    font-size: 24px;
+    font-weight: 400;
+    color: #414141;
+    text-decoration: underline;
+    text-underline-offset: 25%;
+    text-decoration-color: #8685ef;
+}
+
+.footMenu a {
+    text-decoration: none;
+    color: #414141;
+    opacity: 50%;
+}
+
+.footMenu a:hover {
+    font-weight: 400;
+    opacity: 100%;
+}
+
+.footMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.footservices {
+    width: 219px;
+    height: 223px;
+}
+
+.footservices p {
+    font-size: 24px;
+    font-weight: 400;
+    color: #414141;
+    text-decoration: underline;
+    text-underline-offset: 25%;
+    text-decoration-color: #8685ef;
+}
+
+.footservices a {
+    text-decoration: none;
+    color: #414144;
+    opacity: 50%;
+}
+
+.footservices a:hover {
+    font-weight: 400;
+    opacity: 100%;
+}
+
+.footservices {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.contacts {
+    width: 281px;
+    height: 206px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.instagram {
+    width: 63px;
+    height: 60px;
+    background: no-repeat center center / cover url(../images/logos/instagram-logo-facebook-2\ 1.png);
+}
+
+.facebook {
+    width: 63px;
+    height: 60px;
+    background: no-repeat center center / cover url(../images/logos/facebook\ 1.png);
+}
+
+.twitter {
+    width: 63px;
+    height: 60px;
+    background: no-repeat center center / cover url(../images/logos/twitter-logo-fill\ 1.png);
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+}
+
+.iconsText {
+    width: 300px;
+    height: 115px;
+}
+
+.iconsText p {
+    margin: 0;
+}
+
+.text {
+    font-size: 20px; 
+}
+
+.location {
+    width: 25px;
+    height: 23px;
+    background: no-repeat center center / cover url(../images/logos/location\ 1.png);}
+
+.number {
+    width: 27px;
+    height: 28px;
+    background: no-repeat center center / cover url(../images/logos/phone\ 1.png);
+}
+
+.mail {
+    width: 21px;
+    height: 18px;
+    background: no-repeat center center / cover url(../images/logos/email-1571\ 1.png);
+}
+
+.iconsText {
+    display: flex;
+    justify-content: space-around;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.textFooter {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

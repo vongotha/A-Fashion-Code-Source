@@ -1,0 +1,497 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    font-size: 20px;
+    background-color: #FAF7FF;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* HERO SECTION */
+
+.hero {
+    width: 100%;
+    height: 41rem;
+    z-index: 2000;
+    border-radius: 0 0 20px 20px;
+    padding: 0 10px;
+
+    background-image: url(../images/Background/hero-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+}
+
+.heading h1 {
+    font-size: 2.5rem;
+    text-align: right;
+    color: #414141;
+}
+
+.heading h2 {
+    font-family: 'Signika Negative' , sans-serif;
+    font-size: 1.4rem;
+    font-weight: 100;
+    text-align: right;
+    color: #414141;
+    max-width: 550px;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: end;
+    margin-right: 10px;
+}
+
+.cta {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 15px;
+    color: #faf7ff;
+    height: 40px;
+    width: 180px;
+    background-color: #8685ef;
+    border-radius: 22px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #8685ef;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero button:hover {
+    color: #8685ef;
+    background-color: #FAF7FF;
+}
+
+.drawer {
+    width: 33.3rem;
+    height: 27.1rem;
+    margin-left: 10px;
+    background: no-repeat center center / contain url(../images/Background/Drawer\ Image.png);
+
+}
+
+/* SHOWCASE OF ARTCLES */
+
+.showcase {
+    height: 70rem;
+    width: auto;
+    z-index: 1020;
+    background-color: #FAF7FF;
+}
+
+.showcase {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.disblay h3 {
+    margin: 50px 0;  
+    font-family: 'Signika Negative' , sans-serif;
+    font-size: 32px;
+    color: #414141;
+    text-align: center;
+}
+
+.disblay h4 {
+    margin: 0;  
+    margin-block-start: 0;
+    font-family: 'Nunito Sans' , sans-serif;
+    font-weight: 100;
+    font-size: 32px;
+    color: #414141;
+    text-align: center;
+    opacity: 60%;
+    max-width: 1200px;
+}
+
+.disblay {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.carousel {
+    height: 270px;
+    width: 1220px;
+    position: relative;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+
+.carousel button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    padding: 0 10px;
+    top: 50%;
+}
+.arrow-right {
+    background: no-repeat center center / contain url(/images/Background/right-chevron.svg);
+}
+.arrow-right:hover {
+    background-color: #8685ef;
+    opacity: 50%;
+    transform: scale(1.5);
+}
+.arrow-left {
+    background: no-repeat center center / contain url(/images/Background/left-chevron.svg);
+}
+.arrow-left:hover {
+    background-color: #8685ef;
+    opacity: 50%;
+    transform: scale(1.5);
+}
+.displayItem {
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+.first {
+    background-color:lightgrey;
+    width: 200px;
+    height: 180px;
+    border-radius: 20px;
+}
+
+.first:hover {
+    background-color: #FAF7FF;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0px 0px 10px #595767;
+}
+
+.first-img {
+    width: 200px;
+    height: 180px;
+}
+
+.second {
+    display: block;
+    width: 230px;
+    height: 230px;
+    border-radius: 20px;
+    /*box-shadow: 5px -1px 10px #41414177;*/
+    padding: 25px 15px;
+    animation: grow .3s forwards;
+}
+
+@keyframes grow {
+    from  {
+        scale: 0.9;
+        transform: translateY(10px);
+    }
+    to {
+        scale: 1;
+        transform: translateY(0);
+    }
+}
+
+.second:hover {
+    background-color: #FAF7FF;
+    color: #8685ef;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 0px 10px #8685ef;
+}
+
+.animateTable {
+    animation: fade .3s forwards;
+}
+
+@keyframes fade {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/*
+.showcase button {
+    width: 180px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+*/
+
+.showcase button:hover {
+    color: #8685ef;
+    background-color: #FAF7FF;
+}
+
+/* Services */
+
+.services {
+    margin: 0;
+    height: 910px;
+    width: auto;
+    color: #FAF7FF;
+    background-color: #8685ef;
+    position: relative;
+    padding: 0 60px;
+    z-index: 4;
+}
+
+.services h3 {
+    margin: 0;
+    font-family: 'Signika Negative' , sans-serif;
+    font-size: 30px;
+    max-width: 565px;
+}
+
+.services h4 {
+    margin: 50px 0 0 0;
+    font-family: 'Nunito Sans' , sans-serif;
+    font-weight: 100;
+    opacity: 60%;
+    font-size: 30px;
+    text-align: left;
+    max-width: 565px;
+}
+
+.Experience {
+    height: 455px;
+    /*padding: 20px 0;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.Expert {
+    height: 455px;
+    /*padding: 20px 0;*/
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.Expert h3 {
+    text-align: left;
+}
+
+.Expert h4 {
+    text-align: left;
+}
+
+.eximage {
+    width: 500px;
+    height: 400px;
+    background: no-repeat center center / cover url(../images/Background/Services_Experience.png);
+    box-shadow: -1px -1px 10px #e2e0e6;
+}
+
+.chartimage {
+    width: 500px;
+    height: 400px;
+    background: no-repeat center center / cover url(../images/Background/Services-Brands.png);
+    box-shadow: 1px -1px 15px #5fe2b0;
+}
+
+
+/* Brands */
+
+.brands {
+    height: 416px;
+    width: auto;
+    padding: 50px;
+    background-color: #FAF7FF;
+}
+
+.brands {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.brands h3 {
+    margin: 0;
+    font-family: 'Signika Negative' , sans-serif;
+    font-size: 36px;
+    color: #414141;
+    text-align: center;
+}
+
+.brands h4 {
+    margin: 0;
+    font-family: 'Nunito Sans' , sans-serif;
+    font-weight: 100;
+    font-size: 32px;
+    color: #595767;
+    text-align: center;
+}
+
+.brand-logos {
+    height: 88px;
+    width: 100%;
+}
+
+.brand-logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+}
+
+.brand-logos {
+    padding: 0 60px;
+}
+
+.brand1 {
+    width: 105px;
+    height: 88px;
+    background: no-repeat center center url(../images/logos/LogosBrands/Adidas_Logo_PNG_\(25\).png);
+}
+
+.brand2 {
+    width: 105px;
+    height: 88px;
+    background: no-repeat center center url(../images/logos/brands/Levis-Logo-PNG2.png);
+}
+
+.brand3 {
+    width: 105px;
+    height: 88px;
+    background: no-repeat center center url(../images/logos/brands/Zara-Logo-PNG4.png);
+}
+
+.brand4 {
+    width: 105px;
+    height: 88px;
+    background: no-repeat center center url(../images/logos/LogosBrands/Banana\ Republic\ logo.png);
+}
+.brand5 {
+    width: 105px;
+    height: 88px;
+    background: no-repeat center center url(../images/logos/brands/Nike-Logo-PNG11.png);
+}
+.brand6 {
+    width: 105px;
+    height: 88px;
+    background: no-repeat center center url(../images/logos/brands/H&M\ Logo.png);
+}
+.brand7 {
+    width: 105px;
+    height: 88px;
+    background: no-repeat center center / cover url(../images/logos/LogosBrands/Gap\ Logo.png);
+}
+.brand8 {
+    width: 105px;
+    height: 88px;
+    background: no-repeat center center url(../images/logos/brands/ASOS_logo_PNG_\(9\).png);
+}
+
+.logoBrand {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-out;
+}
+
+/*
+.animateLogo {
+    opacity: 1;
+    transform: translateX(0);
+    animation-delay: var(--animation-delay);
+}
+*/
+/* LAST CONTENT */
+
+.lastContent {
+    position: relative;
+    height: 402px;
+    color: #FAF7FF;
+    background: no-repeat center center / cover url(./images/Background/showcase-background.jpg);
+    z-index: 1001;
+}
+
+.lastContent h4 {
+    font-family: 'Nunito Sans' , sans-serif;
+    font-weight: 100;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: 36px;
+    color: #FAF7FF;
+    opacity: .5;
+}
+
+.lastContent h3 {
+    font-family: 'Signika Negative' , sans-serif;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: 32px;
+    color: #FAF7FF;
+}
+
+.lastCta {
+    font-size: 15px;
+    color: #faf7ff;
+    height: 40px;
+    width: 220px;
+    background-color: #8685ef;
+    border-radius: 22px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #8685ef;
+    transition: all 0.3s ease-in-out;
+}
+
+.lastContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    padding: 50px 0px;
+}
+
+.lastContent button:hover {
+    color: #8685ef;
+    background-color: #FAF7FF;
+}
+
+@media screen and (max-width:1230px) {
+    .drawer {
+        transform: scale(0.7);
+    }
+}

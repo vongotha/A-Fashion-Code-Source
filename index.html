@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-Fashion: Home</title>
+    
+    <script src="index.js" type="module" defer></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Signika:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/C-table.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles/C-footer.css">
+    <link rel="stylesheet" href="styles/C-menu.css">
+
+    <script src="/scripts/animation.js" defer></script>
+</head>
+<body>
+    <div id="navigation" class="navigation"> 
+        <div class="logo">
+            <a href="./index.html">
+                <img src="../images/logos/Logo A-Fashion Resized.png" alt="logo">
+            </a>
+        </div>
+        <nav class="navbar">
+            <a href="./index.html" class="nav-links" class="home" class="active">Home</a>
+            <a href="./html/size.html" class="nav-links" class="sizes">Size Guide</a>
+            <a href="./html/contact.html" class="nav-links" class="contact">Contact Us</a>
+        </nav>
+        <div class="buttons">
+            <button onclick="window.location.href='../html/size.html';" class="getSized">Get Sized</button>
+        </div>
+    </div>
+    
+    <div class="hero">
+        <div class="heading">
+            <h1>Tired of Guessing Your Size Online?</h1>
+            <h2>
+                A-Fashion provides comprehensive and accurate size guides for men's and women's clothing, ensuring you get the perfect fit every time.
+            </h2>
+
+            <button onclick="window.location.href='../html/size.html';" class="cta">Find Your Size Now!</button>
+        </div>
+        <div class="drawer"></div>
+    </div>
+
+    <div class="showcase">
+        <div class="disblay">
+
+            <h3>
+                Unlock a World of Perfectly Fitting Clothe
+            </h3>
+
+            <h4>
+                Explore our diverse range of size charts, covering everything from everyday wear to specialized items. Say goodbye to ill-fitting garments and hello to a wardrobe that makes you feel amazing.
+            </h4>
+
+            <div id="carouselContainer" class="carousel">
+                
+            </div>
+
+        </div>
+        <div id="tableContainer" class="table"></div>
+
+        <div>
+            <button onclick="window.location.href='../html/size.html';" id="cta" class="cta">Browse All Size Charts</button>
+        </div>
+    </div>
+
+    <div class="services">
+
+        <div class="Experience">
+
+            <div class="text">
+                <h3>
+                    Designed for an Effortless User Experience
+                </h3>
+        
+                <h4>
+                    Our size charts are presented in a clear, easy-to-understand format, optimized for both desktop and mobile device. Finding the right size is now quick, intuitive, and hassle-free, improving your overall online shopping journey.
+                </h4>
+            </div>
+    
+            <div class="eximage"></div>
+        </div>
+
+        <div class="Expert">
+
+            <div class="chartimage"></div>
+            
+            <div id="textExpert" class="text">
+                <h3>
+                    Expertly Curated from Top Brands' Charts
+                </h3>
+        
+                <h4>
+                    We've meticulously gathered and standard
+                    sizing information directly from your 
+                    favorite clothing brands. This ensures 
+                    you're getting the most accurate and 
+                    up-to-date measurements, eliminating
+                    the inconsistencies you often find across 
+                    different retailers.
+                </h4>
+            </div>
+    
+        </div>
+
+    </div>
+
+    <div class="brands">
+
+        <h3>All Your Brand Sizes Here</h3>
+        <h4>
+            Discover size guides for hundreds of leading men's and women's clothing brands.
+        </h4>
+
+        <div class="brand-logos">
+
+            <div class="brand1" class="logoBrand" style="--animation-delay: 0.1 ;"></div>
+            <div class="brand2" class="logoBrand" style="--animation-delay: 0.2 ;"></div>
+            <div class="brand3" class="logoBrand" style="--animation-delay: 0.3 ;"></div>
+            <div class="brand4" class="logoBrand" style="--animation-delay: 0.4 ;"></div>
+            <div class="brand5" class="logoBrand" style="--animation-delay: 0.5 ;"></div>
+            <div class="brand6" class="logoBrand" style="--animation-delay: 0.6 ;"></div>
+            <div class="brand7" class="logoBrand" style="--animation-delay: 0.7 ;"></div>
+            <div class="brand8" class="logoBrand" style="--animation-delay: 0.8 ;"></div>
+
+        </div>
+
+    </div>
+    
+    <div class="lastContent">
+
+        <h3>
+            Stop Guessing, Start Shopping Confidently.
+        </h3>
+        <h4>
+            Finding the perfect fit online has never been easier. 
+        </h4>
+        <button onclick="window.location.href='../html/size.html';" class="lastCta">
+            Explore Size Guides Now!
+        </button>
+
+    </div>
+
+    <footer>
+
+        <div class="h-footer">
+            <div class="company">
+                <div class="logocompany"></div>
+                <h4>
+                    Unlock your perfect fit online;
+                    accurate size guides are the key to shopping with
+                    confidence and leaving returns behind.
+                </h4>
+            </div>
+    
+            <div class="footMenu">
+                <p>Menu</p>
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="../html/size.html">
+                    Size Guide
+                </a>
+
+                <a href="../html/contact.html">
+                    Contact
+                </a>
+            </div>
+            
+            <div class="footservices">
+                <p>
+                    Services
+                </p>
+                <a href="/html/size.html">
+                    Size Guide
+                </a>
+
+                <a href="/html/faq.html">
+                    FAQ
+                </a>
+
+                <a href="/html/howTomeasure.html">
+                    How to Measure
+                </a>
+            </div>
+
+            <div class="contacts">
+
+                <div class="social">
+                    <a href="">
+                        <div class="instagram">
+                        </div>
+                    </a>
+                    
+                    <a href="">
+                        <div class="facebook">
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="twitter">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="iconsText">
+                    <div class="icons">
+                        <div class="location"></div>
+                        <div class="mail"></div>
+                        <div class="number"></div>
+                    </div>
+    
+                    <div class="textFooter">
+                       <p>Kinshasa, 147 Gombe</p>
+                       <p>afashion@mail.com</p>
+                       <p>+243 887 654 220</p> 
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <hr>
+        <div class="l-footer">
+            
+            <p>Coppyright@2025</p>
+            
+            <a href="0">
+                <p>Privacy & Policy</p>
+            </a>
+        </div>
+
+    </footer>
+
+</body>
+</html>
