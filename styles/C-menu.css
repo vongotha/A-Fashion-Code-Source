@@ -1,0 +1,131 @@
+
+.navigation {
+    position: fixed;
+    padding: 20px 50px;
+    height: 70px;
+    width: 100%;
+    background-color: #414141;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0px 0px 5px #000;
+    z-index: 1000;
+}
+
+.active-nav {
+    text-decoration: underline !important;
+    text-decoration-thickness: 20% !important;
+    text-decoration-color: #8685ef !important;
+    text-underline-offset: 15% !important;
+}
+
+.logo a {
+    text-decoration: none;
+}
+.logo:hover {
+    opacity: 80%;
+}
+
+.navigation a {
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
+    font-size: 28px;
+    color: #FAF7FF;
+}
+.navbar a {
+    padding: 0px 55px;
+}
+    
+        
+.navbar a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 20%;
+    text-decoration-color: #8685ef;
+    text-underline-offset: 15%;
+
+    animation: slideLeft .2s forwards ease-in;
+}
+
+.buttons button {
+    font-size: 20px;
+    color: #faf7ff;
+    height: 40px;
+    width: 130px;
+    background-color: #8685ef;
+    border-radius: 22px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #8685ef;
+    transition: all 0.3s ease-in-out;
+}
+
+.buttons button:hover {
+    color: #8685ef;
+    background-color: #FAF7FF;
+}
+
+#navigation-on {
+    display: none;
+    background: none;
+    border: 1em;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+#navigation-off {
+    display: none;
+    background: none;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+}
+ 
+@media only screen and (max-width: 878px) {
+    .navbar a {
+        white-space: nowrap;
+        padding: 0px 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    #navigation-on, #navigation-off {
+        display: block;
+    }
+    .logo {
+        display: none;
+    }
+    .navigation {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: min(15em, 100%);
+        z-index: 1;
+        border-left: 1px solid #8685ef;
+
+        flex-direction: column;
+        align-items: flex-start;
+        transition: right 0.3s ease-in-out;
+    }
+
+    .navigationShow {
+        right: 0;
+    }
+
+    .navbar {
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .navbar a {
+        width: 100%;
+    }
+}
+
+@keyframes slideLeft {
+    0%{ transform: translateX(20px);}
+    100%{ transform: translateX(0px);}
+}

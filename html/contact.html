@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-Fashion: Contact Us</title>
+    <script src="/scripts/contact.js" type="module" defer></script>
+    <script src="/scripts/function.js" type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/styles/C-menu.css">
+    <link rel="stylesheet" href="/styles/contact.css">
+    <link rel="stylesheet" href="/styles/C-footer.css">
+</head>
+<body>
+    <div class="navigation"> 
+        <div class="logo">
+            <a href="/index.html">
+                <img src="../images/logos/Logo A-Fashion Resized.png" alt="logo">
+            </a>
+        </div>
+        <nav class="navbar">
+            <a href="/index.html" class="nav-links" class="home" class="active-nav">Home</a>
+            <a href="/html/size.html" class="nav-links" class="sizes">Size Guide</a>
+            <a href="./contact.html" class="nav-links" class="contact">Contact Us</a>
+        </nav>
+        <div class="buttons">
+            <button onclick="window.location.href='../html/size.html';" class="getSized">Get Sized</button>
+        </div>
+    </div>
+
+    <div class="introduction">
+        <div class="introductionText">
+            <h1>CONTACT US</h1>
+        </div>
+    </div>
+
+    <div class="qualities">
+        <h2>Connect with our team</h2>
+        <div class="container">
+            <div class="time">
+                <div class="time-img"></div>
+                <div class="offers-container">
+                    <p class="offers">
+                        Need a quick answer?
+                        Send us your questions, and we'll get
+                        back to you promptly.
+                    </p>
+                </div>
+            </div>
+
+            <div class="balance">
+                <div class="balance-img"></div>
+                <div class="offers-container">
+                    <p class="offers">
+                        We offer various ways
+                        for you to get in touch, ensuring you can reach us through
+                        the channel that's most convenient for you.
+                    </p>
+                </div>
+            </div>
+
+            <div class="custom">
+                <div class="custom-img"></div>
+                <div class="offers-container">
+                    <p class="offers">
+                        We understand that every inquiry is unique and our team is dedicated to providing personalized solutions.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="form-container">
+        <h2>Contact Us</h2>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="hidden" name="access_key"
+            value="ec0ea151-508b-4515-a469-76655130f828">
+
+            <label class="label" for="name">Name</label>
+            <input type="text" name="name" placeholder="Jack" required>
+
+            <label class="label" for="mail">E-mail</label>
+            <input class="form-inputs" type="email" name="email" placeholder="your@email.com" required>
+            
+            <label class="label" for="message">Message</label>
+            <textarea name="message" class="form-inputs" cols="50" required rows="5" placeholder="Tell us your inquiries..." ></textarea>
+
+            <button type="submit">Submit Form</button>
+
+        </form>
+    </div>
+
+    <footer>
+
+        <div class="h-footer">
+            <div class="company">
+                <div class="logocompany"></div>
+                <h4>
+                    Unlock your perfect fit online;
+                    accurate size guides are the key to shopping with
+                    confidence and leaving returns behind.
+                </h4>
+            </div>
+    
+            <div class="footMenu">
+                <p>Menu</p>
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="../html/size.html">
+                    Size Guide
+                </a>
+
+                <a href="../html/contact.html">
+                    Contact
+                </a>
+            </div>
+            
+            <div class="footservices">
+                <p>
+                    Services
+                </p>
+                <a href="/html/size.html">
+                    Size Guide
+                </a>
+
+                <a href="/html/faq.html">
+                    FAQ
+                </a>
+
+                <a href="/html/howTomeasure.html">
+                    How to Measure
+                </a>
+            </div>
+
+            <div class="contacts">
+
+                <div class="social">
+                    <a href="">
+                        <div class="instagram">
+                        </div>
+                    </a>
+                    
+                    <a href="">
+                        <div class="facebook">
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="twitter">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="iconsText">
+                    <div class="icons">
+                        <div class="location"></div>
+                        <div class="mail"></div>
+                        <div class="number"></div>
+                    </div>
+    
+                    <div class="textFooter">
+                       <p>Kinshasa, 147 Gombe</p>
+                       <p>afashion@mail.com</p>
+                       <p>+243 887 654 220</p> 
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <hr>
+        <div class="l-footer">
+            
+            <p>Coppyright@2025</p>
+            
+            <a href="0">
+                <p>Privacy & Policy</p>
+            </a>
+        </div>
+
+    </footer>
+
+</body>
+</html>
