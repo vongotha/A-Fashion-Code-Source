@@ -285,7 +285,7 @@ function createItemFromFileName (nameCsvFile,imagesFolder) {
 
   const id = nomBase
   const nameArticle = `${nameBrief} ${gender}`
-  const imageLink = `../images/${imagesFolder}/${gender}/${nomBase}.png`
+  const imageLink = `images/${imagesFolder}/${gender}/${nomBase}.png`
   
   return {
     Id: id,
@@ -295,7 +295,7 @@ function createItemFromFileName (nameCsvFile,imagesFolder) {
     brand: brand.toUpperCase(),
     Image: imageLink,
     Describe: nameBrief,
-    Table: `../data/${nameCsvFile}`
+    Table: `data/${nameCsvFile}`
   }
 }
 
