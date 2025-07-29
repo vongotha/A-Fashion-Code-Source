@@ -1,9 +1,5 @@
 -----
 
-Absolument \! Voici un brouillon de fichier `README.md` pour ton dépôt GitHub, conçu pour être clair, informatif et engageant. N'hésite pas à le personnaliser avec plus de détails spécifiques à ton projet.
-
------
-
 # A-FASHION
 
 -----
