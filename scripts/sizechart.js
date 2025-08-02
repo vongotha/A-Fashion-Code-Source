@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
         lurre.appendChild(imageSized);
 
         addTableToHTML(item.Table);
-        console.log(item.Table)
     }
 
     injectHTML(itemID)
