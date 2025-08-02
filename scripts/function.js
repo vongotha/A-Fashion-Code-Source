@@ -309,7 +309,7 @@ export function recreateItemFromID (nameCsvFile,imagesFolder) {
 
   const id = nomBase
   const nameArticle = `${nameBrief} ${gender}`
-  const imageLink = `images/${imagesFolder}/${gender}/${nomBase}.png`
+  const imageLink = `../images/${imagesFolder}/${gender}/${nomBase}.png`
   
   return {
     Id: id,
@@ -319,7 +319,7 @@ export function recreateItemFromID (nameCsvFile,imagesFolder) {
     brand: brand.toUpperCase(),
     Image: imageLink,
     Describe: nameBrief,
-    Table: `../A-Fashion-Code-Source/data/${tablePath}`
+    Table: `../data/${tablePath}`
   }
 }
 
