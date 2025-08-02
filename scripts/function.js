@@ -300,6 +300,7 @@ function createItemFromFileName (nameCsvFile,imagesFolder) {
 
 export function recreateItemFromID (nameCsvFile,imagesFolder) {
   const tablePath = nameCsvFile + '-sizes.csv'
+  const repoName = 'A-Fashion-Code-Source'
   const nomBase = tablePath.replace('-sizes.csv','')
   const parts = nomBase.split('-')
   const categories = capitalize(parts[0])
@@ -309,8 +310,8 @@ export function recreateItemFromID (nameCsvFile,imagesFolder) {
 
   const id = nomBase
   const nameArticle = `${nameBrief} ${gender}`
-  const imageLink = `../images/${imagesFolder}/${gender}/${nomBase}.png`
-  
+  const imageLink = `${repoName}/images/${imagesFolder}/${gender}/${nomBase}.png`
+
   return {
     Id: id,
     Nom: nameArticle,
@@ -319,7 +320,7 @@ export function recreateItemFromID (nameCsvFile,imagesFolder) {
     brand: brand.toUpperCase(),
     Image: imageLink,
     Describe: nameBrief,
-    Table: `../data/${tablePath}`
+    Table: `${repoName}/data/${tablePath}`
   }
 }
 
