@@ -193,7 +193,6 @@ export function convertTableUnits() {
 
 /**
  * ADD THE ITEM TABLE TO THE DOM
- * @param {string} tablePath 
  * @returns {HTMLElement}
  */
 export function addTableToHTML (tablePath) {
@@ -278,6 +277,7 @@ function processCSV(csvString) {
 function createItemFromFileName (nameCsvFile,imagesFolder) {
   const nomBase = nameCsvFile.replace('-sizes.csv','')
   const parts = nomBase.split('-')
+  const repoName = 'A-Fashion-Code-Source'
   const categories = capitalize(parts[0])
   const brand = capitalize(parts [1])
   const nameBrief = capitalize(parts.slice(2,-1).join('-'))
@@ -285,7 +285,7 @@ function createItemFromFileName (nameCsvFile,imagesFolder) {
 
   const id = nomBase
   const nameArticle = `${nameBrief} ${gender}`
-  const imageLink = `images/${imagesFolder}/${gender}/${nomBase}.png`
+  const imageLink = `${repoName}/images/${imagesFolder}/${gender}/${nomBase}.png`
   return {
     Id: id,
     Nom: nameArticle,
@@ -294,7 +294,7 @@ function createItemFromFileName (nameCsvFile,imagesFolder) {
     brand: brand.toUpperCase(),
     Image: imageLink,
     Describe: nameBrief,
-    Table: `data/${nameCsvFile}`
+    Table: `${repoName}/data/${nameCsvFile}`
   }
 }
 
