@@ -294,7 +294,7 @@ function createItemFromFileName (nameCsvFile,imagesFolder) {
     brand: brand.toUpperCase(),
     Image: imageLink,
     Describe: nameBrief,
-    Table: `data/${nameCsvFile}`
+    Table: `../data/${nameCsvFile}`
   }
 }
 
@@ -320,7 +320,7 @@ export function recreateItemFromID (nameCsvFile,imagesFolder) {
     brand: brand.toUpperCase(),
     Image: imageLink,
     Describe: nameBrief,
-    Table: `data/${tablePath}`
+    Table: `../data/${tablePath}`
   }
 }
 
