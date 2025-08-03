@@ -38,7 +38,7 @@ Voici les principales fonctionnalités de l'application :
   * **HTML5 :** Structure sémantique du contenu.
   * **CSS3 :** Stylisation et animations (transitions, `@keyframes`).
   * **JavaScript (ES6+) :** Logique front-end dynamique, manipulation du DOM, gestion des événements, **Fetch API** pour le chargement des données, **Intersection Observer** pour les animations au défilement.
-  * **(Optionnel: Vite.js) :** Pour un environnement de développement rapide et un build optimisé (si tu as décidé de l'intégrer).
+  * **(Optionnel: Vite.js) :** Pour un environnement de développement rapide et un build optimisé.
 
 ## Installation et Démarrage
 
@@ -55,7 +55,7 @@ Pour obtenir une copie locale fonctionnelle du projet, suivez ces étapes simple
 
     ```bash
     git clone https://github.com/votre-utilisateur/votre-repo.git
-    cd votre-repo
+    cd A-Fashion-Code-Source
     ```
 
 2.  **Ouvrez les fichiers HTML :**
@@ -106,14 +106,6 @@ Les contributions sont les bienvenues \! Si vous souhaitez améliorer ce projet,
 4.  Pusher vers la branche (`git push origin feature/NouvelleFonctionnalite`).
 5.  Ouvrir une Pull Request.
 
-## Crédits
-
-  * **Développeur Principal :** [Argon Dev]
-
 ## Licence
 
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](https://www.google.com/search?q=LICENSE) pour plus de détails.
-
------
-
-J'espère que cela t'aiderera à démarrer ton `README` \! C'est un excellent moyen de présenter ton travail.
