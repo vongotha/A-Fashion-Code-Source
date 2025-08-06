@@ -1,11 +1,6 @@
 import { addTableToHTML,randomItems,allItemsObjects, getRandomItems, createHTMLCarrouselItemTables, asssignActiveClass } from "./scripts/function.js";
 
 const itemsHomePage = getRandomItems(allItemsObjects, 3)
-itemsHomePage.forEach(
-  item => {
-    //console.log(item.Image)
-  }
-)
 
 const slides = document.getElementsByClassName('first');
 let slideIndex = 1;
