@@ -102,7 +102,12 @@ export function voidSearch () {
   const commentNoContentFound = document.createElement('h3')
   textNoContentFound.innerText = 'No Content Found'
   commentNoContentFound.innerText = 'Adjust your filter for better results using one filter per search before apply.'
+  
 
+  noContentFound.appendChild(imageNoContentFound)
+  noContentFound.appendChild(textNoContentFound)
+  noContentFound.appendChild(commentNoContentFound)
+  main.appendChild(noContentFound)
   noContentFound.appendChild(imageNoContentFound)
   noContentFound.appendChild(textNoContentFound)
   noContentFound.appendChild(commentNoContentFound)
