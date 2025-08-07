@@ -291,9 +291,9 @@ function createItemFromFileName (nameCsvFile,imagesFolder) {
 
   const imageOffUrl = "../images/Background/image_Off.svg"
 
-  const id = nomBase
-  const nameArticle = `${nameBrief} ${gender}`
-  const imageLink = `../images/${imagesFolder}/${gender}/${nomBase}.png`
+  const id = nomBase;
+  const nameArticle = `${nameBrief} ${gender}`;
+  const imageLink = `../images/${imagesFolder}/${gender}/${nomBase}.png`;
   return {
     Id: id,
     Nom: nameArticle,
@@ -388,7 +388,7 @@ export function createMainHTMLItem(listOfItems) {
     container.appendChild(div);
     
     
-    getRequestImages(item,ItemImage)
+    getRequestImages(item,ItemImage);
   });
 }
 
@@ -573,7 +573,7 @@ export const allItemsObjects = createListOfItems(allItemsTablesNames)
 export const randomItems = getRandomItems(allItemsObjects,20);
 
 function getRequestImages(item, ItemImage) {
-  if (!ItemImage) {
+  if (!item) {
     console.error(`L'élément '${item.Id}' est introuvable dans le DOM.`);
     return ;
   }
