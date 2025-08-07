@@ -92,21 +92,21 @@ export function verifySearchContent (listOfItems) {
   }
 }
 export function voidSearch () {
-      const noContentFound = document.createElement('div')
-      noContentFound.classList.add('noContentFound')
-      
-      const imageNoContentFound = document.createElement('img')
-      imageNoContentFound.setAttribute('src', '../images/Background/no-result-search.svg')
-      imageNoContentFound.setAttribute('alt', 'No Content Found')
-      const textNoContentFound = document.createElement('h2')
-      const commentNoContentFound = document.createElement('h3')
-      textNoContentFound.innerText = 'No Content Found'
-      commentNoContentFound.innerText = 'Adjust your filter for better results using one filter per search before apply.'
+  const noContentFound = document.createElement('div')
+  noContentFound.classList.add('noContentFound')
+  
+  const imageNoContentFound = document.createElement('img')
+  imageNoContentFound.setAttribute('src', '../images/Background/no-result-search.svg')
+  imageNoContentFound.setAttribute('alt', 'No Content Found')
+  const textNoContentFound = document.createElement('h2')
+  const commentNoContentFound = document.createElement('h3')
+  textNoContentFound.innerText = 'No Content Found'
+  commentNoContentFound.innerText = 'Adjust your filter for better results using one filter per search before apply.'
 
-      noContentFound.appendChild(imageNoContentFound)
-      noContentFound.appendChild(textNoContentFound)
-      noContentFound.appendChild(commentNoContentFound)
-      main.appendChild(noContentFound)
+  noContentFound.appendChild(imageNoContentFound)
+  noContentFound.appendChild(textNoContentFound)
+  noContentFound.appendChild(commentNoContentFound)
+  main.appendChild(noContentFound)
 }
 
 export function convertTableUnits() {
@@ -283,6 +283,8 @@ function createItemFromFileName (nameCsvFile,imagesFolder) {
   const nameBrief = capitalize(parts.slice(2,-1).join('-'))
   const gender = capitalize(parts[parts.length - 1])
 
+  const imageOffUrl = "images/Background/image_Off.svg"
+
   const id = nomBase
   const nameArticle = `${nameBrief} ${gender}`
   const imageLink = `../images/${imagesFolder}/${gender}/${nomBase}.png`
@@ -294,7 +296,8 @@ function createItemFromFileName (nameCsvFile,imagesFolder) {
     brand: brand.toUpperCase(),
     Image: imageLink,
     Describe: nameBrief,
-    Table: `../data/${nameCsvFile}`
+    Table: `../data/${nameCsvFile}`,
+    imageNotFound: imageOffUrl
   }
 }
 
@@ -365,6 +368,7 @@ export function createMainHTMLItem(listOfItems) {
     ItemImage.classList.add('itemDivImage');
     ItemImage.setAttribute('alt', item.Nom);
     ItemImage.style.background = `no-repeat center center / contain url(${item.Image})`;
+    getRequestImages(item);
 
     divImage.appendChild(ItemImage);
 
@@ -404,7 +408,7 @@ export function createHTMLCarrouselItemTables(listOfItems) {
     ItemImage.classList.add('first-img');
     ItemImage.setAttribute('alt', item.Nom);
     ItemImage.style.background = `no-repeat center center / contain url(${item.Image})`;
-
+    getRequestImages(item);
     lurre.appendChild(ItemImage);
     container.appendChild(lurre);
   });
@@ -439,6 +443,7 @@ export function createCarrouselItems(listOfItems, idContainer) {
     itemImage.classList.add('itemImg');
     itemImage.setAttribute('alt', item.Nom);
     itemImage.style.background = `no-repeat center center / contain url(${item.Image})`;
+    getRequestImages(item);
 
     lurreContainer.appendChild(itemImage);
 
@@ -557,3 +562,15 @@ export function getRandomItems(allItemsObjects, count) {
 export const allItemsObjects = createListOfItems(allItemsTablesNames)
 
 export const randomItems = getRandomItems(allItemsObjects,20)
+
+function getRequestImages(imageUrl) {
+  return fetch(imageUrl.Image)
+    .then(response => {
+      if (response.ok) {
+        return response.blob()
+      } else {
+        console.error('Incapable d\'afficher:', response.statusText);
+        return null;
+      } 
+    })
+}
