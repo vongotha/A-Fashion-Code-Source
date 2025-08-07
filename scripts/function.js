@@ -109,6 +109,7 @@ export function voidSearch () {
   main.appendChild(noContentFound)
 }
 
+
 export function convertTableUnits() {
   const tableContainer = document.getElementById('tableContainer');
   const table = tableContainer.querySelector('table');
@@ -287,7 +288,7 @@ function createItemFromFileName (nameCsvFile,imagesFolder) {
 
   const id = nomBase
   const nameArticle = `${nameBrief} ${gender}`
-  const imageLink = `../images/${imagesFolder}/${gender}/${nomBase}.png`
+  const imageLink = `./images/${imagesFolder}/${gender}/${nomBase}.png`
   return {
     Id: id,
     Nom: nameArticle,
@@ -427,6 +428,8 @@ export function createHTMLCarrouselItemTables(listOfItems) {
   container.appendChild(nextButton);
 }
 
+
+
 export function createCarrouselItems(listOfItems, idContainer) {
   const container = document.getElementById(idContainer);
   container.innerHTML = ''
@@ -562,6 +565,22 @@ export function getRandomItems(allItemsObjects, count) {
 export const allItemsObjects = createListOfItems(allItemsTablesNames)
 
 export const randomItems = getRandomItems(allItemsObjects,20)
+
+function getRequestImages() {
+  const promises = allItemsTablesNames.map(item => {
+    return fetch(item.Image)
+      .then(response => {
+        if (response.ok) {
+          return response.blob();
+        } else {
+          console.error('Incapable d\'afficher:', response.statusText);
+          return null;
+        }
+      });
+  });
+  return Promise.all(promises);
+}
+getRequestImages()
 
 function getRequestImages(imageUrl) {
   return fetch(imageUrl.Image)
