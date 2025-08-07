@@ -102,7 +102,12 @@ export function voidSearch () {
   const commentNoContentFound = document.createElement('h3')
   textNoContentFound.innerText = 'No Content Found'
   commentNoContentFound.innerText = 'Adjust your filter for better results using one filter per search before apply.'
+  
 
+  noContentFound.appendChild(imageNoContentFound)
+  noContentFound.appendChild(textNoContentFound)
+  noContentFound.appendChild(commentNoContentFound)
+  main.appendChild(noContentFound)
   noContentFound.appendChild(imageNoContentFound)
   noContentFound.appendChild(textNoContentFound)
   noContentFound.appendChild(commentNoContentFound)
@@ -564,23 +569,7 @@ export function getRandomItems(allItemsObjects, count) {
  */
 export const allItemsObjects = createListOfItems(allItemsTablesNames)
 
-export const randomItems = getRandomItems(allItemsObjects,20)
-
-function getRequestImages() {
-  const promises = allItemsTablesNames.map(item => {
-    return fetch(item.Image)
-      .then(response => {
-        if (response.ok) {
-          return response.blob();
-        } else {
-          console.error('Incapable d\'afficher:', response.statusText);
-          return null;
-        }
-      });
-  });
-  return Promise.all(promises);
-}
-getRequestImages()
+export const randomItems = getRandomItems(allItemsObjects,20);
 
 function getRequestImages(imageUrl) {
   return fetch(imageUrl.Image)
