@@ -289,11 +289,11 @@ function createItemFromFileName (nameCsvFile,imagesFolder) {
   const nameBrief = capitalize(parts.slice(2,-1).join('-'))
   const gender = capitalize(parts[parts.length - 1])
 
-  const imageOffUrl = "images/Background/image_Off.svg"
+  const imageOffUrl = "../images/Background/image_Off.svg"
 
   const id = nomBase
   const nameArticle = `${nameBrief} ${gender}`
-  const imageLink = `./images/${imagesFolder}/${gender}/${nomBase}.png`
+  const imageLink = `../images/${imagesFolder}/${gender}/${nomBase}.png`
   return {
     Id: id,
     Nom: nameArticle,
@@ -373,21 +373,22 @@ export function createMainHTMLItem(listOfItems) {
     const ItemImage = document.createElement('div');
     ItemImage.classList.add('itemDivImage');
     ItemImage.setAttribute('alt', item.Nom);
-    ItemImage.style.background = `no-repeat center center / contain url(${item.Image})`;
-    getRequestImages(item);
-
+    
     divImage.appendChild(ItemImage);
-
+    
     const divInfo = document.createElement('div');
     divInfo.classList.add('infoMain');
     divInfo.innerHTML = `
-      <h4>${item.Describe}</h4>
-      <h5>${item.categories}</h5>
-      <button onclick="window.location.href='../html/sizeChart.html?id=${item.Id}';">See Chart</button>
+    <h4>${item.Describe}</h4>
+    <h5>${item.categories}</h5>
+    <button onclick="window.location.href='../html/sizeChart.html?id=${item.Id}';">See Chart</button>
     `;
     div.appendChild(divImage);
     div.appendChild(divInfo);
     container.appendChild(div);
+    
+    
+    getRequestImages(item,ItemImage)
   });
 }
 
@@ -571,14 +572,17 @@ export const allItemsObjects = createListOfItems(allItemsTablesNames)
 
 export const randomItems = getRandomItems(allItemsObjects,20);
 
-function getRequestImages(imageUrl) {
-  return fetch(imageUrl.Image)
+function getRequestImages(item, ItemImage) {
+  if (!ItemImage) {
+    console.error(`L'élément '${item.Id}' est introuvable dans le DOM.`);
+    return ;
+  }
+  return fetch(item.Image)
     .then(response => {
       if (response.ok) {
-        return response.blob()
+        ItemImage.style.background = `no-repeat center center / contain url(${item.Image})`;
       } else {
-        console.error('Incapable d\'afficher:', response.statusText);
-        return null;
-      } 
+        ItemImage.style.background = `no-repeat center center / contain url(${item.imageNotFound})`;
+      }
     })
 }
