@@ -205,52 +205,63 @@ export function addTableToHTML (tablePath) {
   const tableContainer = document.getElementById('tableContainer')
   tableContainer.innerHTML = ''; // Clear previous content
   let csvDataArray = [];
-  
-  fetch(tablePath)
-    .then(response => response.text())
-    .then(data => {
-      csvDataArray = processCSV(data);
-  
-      const callTable = document.getElementById('tableContainer')
-      const table = document.createElement('table')
-      table.classList.add('table')
-      const thead = document.createElement('thead')
-      const tbody = document.createElement('tbody')
-      
-      if (csvDataArray.length > 0) {
-        const caption = document.createElement('caption')
-        caption.innerText = `${createItemFromFileName(tablePath).Describe}`
-        const tr = document.createElement('tr')
-        const column = Object.keys(csvDataArray[0])
-        column.forEach(columText => {
-          const td = document.createElement('td')
-          td.textContent = columText
-          tr.appendChild(td)
-        })
+  if (!tablePath) {
+    alert("Table path is required");
+  } else {
+    fetch(tablePath)
+      .then(response => {
+        if (!response.ok){
+          alert("Erreur lors de la récupération du fichier CSV");
+        }
+        else {
+          response.then(response => response.text())
+          .then(data => {
+            csvDataArray = processCSV(data);
+
+            const callTable = document.getElementById('tableContainer')
+            const table = document.createElement('table')
+            table.classList.add('table')
+            const thead = document.createElement('thead')
+            const tbody = document.createElement('tbody')
+            
+            if (csvDataArray.length > 0) {
+              const caption = document.createElement('caption')
+              caption.innerText = `${createItemFromFileName(tablePath).Describe}`
+              const tr = document.createElement('tr')
+              const column = Object.keys(csvDataArray[0])
+              column.forEach(columText => {
+                const td = document.createElement('td')
+                td.textContent = columText
+                tr.appendChild(td)
+              })
+              
+              table.appendChild(caption)
+              thead.appendChild(tr)
+              table.appendChild(thead)
+              callTable.appendChild(table)
         
-        table.appendChild(caption)
-        thead.appendChild(tr)
-        table.appendChild(thead)
-        callTable.appendChild(table)
-  
-        csvDataArray.forEach( item => {
-          const row = document.createElement('tr')
-          column.forEach( key => {
-            const cell = document.createElement('td')
-            cell.textContent = item[key]
-            row.appendChild(cell)
-          })
-          tbody.appendChild(row)
-        })
-        table.appendChild(tbody)
-      } else {
-        const lostData = document.createElement(p)
-        lostData.textContent = 'AUCUNE DONNE'
-        table.appendChild(lostData)
-      }
+              csvDataArray.forEach( item => {
+                const row = document.createElement('tr')
+                column.forEach( key => {
+                  const cell = document.createElement('td')
+                  cell.textContent = item[key]
+                  row.appendChild(cell)
+                })
+                tbody.appendChild(row)
+              })
+              table.appendChild(tbody)
+            } else {
+              const lostData = document.createElement(p)
+              lostData.textContent = 'AUCUNE DONNE'
+              table.appendChild(lostData)
+            }
       
     })
     .catch(error => console.error('Erreur lors de la lecture du fichier CSV:', error));
+        }
+      })
+    
+  }
 }
 
 
@@ -302,7 +313,7 @@ function createItemFromFileName (nameCsvFile,imagesFolder) {
     brand: brand.toUpperCase(),
     Image: imageLink,
     Describe: nameBrief,
-    Table: `../data/${nameCsvFile}`,
+    Table: `sdfg/data/${nameCsvFile}`,
     imageNotFound: imageOffUrl
   }
 }
