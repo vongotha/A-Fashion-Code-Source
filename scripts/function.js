@@ -204,64 +204,97 @@ export function convertTableUnits() {
 export function addTableToHTML (tablePath) {
   const tableContainer = document.getElementById('tableContainer')
   tableContainer.innerHTML = ''; // Clear previous content
+  const callTable = document.getElementById('tableContainer')
+  const table = document.createElement('table')
+  table.classList.add('table')
+  const thead = document.createElement('thead')
+  const tbody = document.createElement('tbody')
   let csvDataArray = [];
-  if (!tablePath) {
-    alert("Table path is required");
-  } else {
+  
+  // ...
+if (!tablePath) {
+    alert('Table path is invalid');
+} else {
     fetch(tablePath)
-      .then(response => {
-        if (!response.ok){
-          alert("Erreur lors de la récupération du fichier CSV");
-        }
-        else {
-          response.then(response => response.text())
-          .then(data => {
-            csvDataArray = processCSV(data);
+    .then(response => {
+        if (!response.ok) {
+            callTable.innerHTML = '';
+            callTable.classList.add('tableNotFound');
 
-            const callTable = document.getElementById('tableContainer')
-            const table = document.createElement('table')
-            table.classList.add('table')
-            const thead = document.createElement('thead')
-            const tbody = document.createElement('tbody')
+            const nameOfItem = createItemFromFileName(tablePath).Name;
+            const nameMissingItem = document.createElement('p');
+            nameMissingItem.textContent = `Table not found: ${nameOfItem}`;
+            nameMissingItem.style.fontSize = '20px';
+            nameMissingItem.style.color = 'gray';
+
+            const message = document.createElement('p');
+            message.style.color = 'gray';
+            message.style.fontSize = '14px';
+            message.textContent = 'Sorry the table didn\'t load well. Please we\'re working on it';
+
+            const notFoundSvg = document.createElement('img');
+            notFoundSvg.style.opacity = '0.5';
             
-            if (csvDataArray.length > 0) {
-              const caption = document.createElement('caption')
-              caption.innerText = `${createItemFromFileName(tablePath).Describe}`
-              const tr = document.createElement('tr')
-              const column = Object.keys(csvDataArray[0])
-              column.forEach(columText => {
-                const td = document.createElement('td')
-                td.textContent = columText
-                tr.appendChild(td)
-              })
-              
-              table.appendChild(caption)
-              thead.appendChild(tr)
-              table.appendChild(thead)
-              callTable.appendChild(table)
-        
-              csvDataArray.forEach( item => {
-                const row = document.createElement('tr')
-                column.forEach( key => {
-                  const cell = document.createElement('td')
-                  cell.textContent = item[key]
-                  row.appendChild(cell)
-                })
-                tbody.appendChild(row)
-              })
-              table.appendChild(tbody)
-            } else {
-              const lostData = document.createElement(p)
-              lostData.textContent = 'AUCUNE DONNE'
-              table.appendChild(lostData)
-            }
-      
-    })
-    .catch(error => console.error('Erreur lors de la lecture du fichier CSV:', error));
+            // Le chemin de l'image est peut-être incorrect, vérifie-le
+            notFoundSvg.src = '../images/Background/table_NotFound.svg';
+            notFoundSvg.alt = 'Table Not Found';
+
+            callTable.appendChild(notFoundSvg);
+            callTable.appendChild(nameMissingItem);
+            callTable.appendChild(message);
+
+            // Je lève une erreur pour arrêter la chaîne de promises
+            throw new Error('Network response was not ok');
         }
-      })
-    
-  }
+        
+        return response.text();
+    })
+    .then(data => {
+        const csvDataArray = processCSV(data);
+        
+        const table = document.createElement('table');
+        const thead = document.createElement('thead');
+        const tbody = document.createElement('tbody');
+
+        if (csvDataArray.length > 0) {
+            const caption = document.createElement('caption');
+            caption.innerText = `${createItemFromFileName(tablePath).Describe}`;
+            const tr = document.createElement('tr');
+            const column = Object.keys(csvDataArray[0]);
+
+            column.forEach(columText => {
+                const td = document.createElement('td');
+                td.textContent = columText;
+                tr.appendChild(td);
+            });
+            
+            table.appendChild(caption);
+            thead.appendChild(tr);
+            table.appendChild(thead);
+            
+            csvDataArray.forEach(item => {
+                const row = document.createElement('tr');
+                column.forEach(key => {
+                    const cell = document.createElement('td');
+                    cell.textContent = item[key];
+                    row.appendChild(cell);
+                });
+                tbody.appendChild(row);
+            });
+
+            table.appendChild(tbody);
+            callTable.appendChild(table);
+        } else {
+            const lostData = document.createElement('p');
+            lostData.textContent = 'No data';
+            table.appendChild(lostData);
+            callTable.appendChild(table);
+        }
+    })
+    .catch(error => {
+        console.error('Erreur lors de la lecture du fichier CSV:', error);
+    });
+}
 }
 
 
@@ -313,7 +346,7 @@ function createItemFromFileName (nameCsvFile,imagesFolder) {
     brand: brand.toUpperCase(),
     Image: imageLink,
     Describe: nameBrief,
-    Table: `sdfg/data/${nameCsvFile}`,
+    Table: `../data/${nameCsvFile}`,
     imageNotFound: imageOffUrl
   }
 }
@@ -582,6 +615,7 @@ export function getRandomItems(allItemsObjects, count) {
 export const allItemsObjects = createListOfItems(allItemsTablesNames)
 
 export const randomItems = getRandomItems(allItemsObjects,20);
+
 
 function getRequestImages(item, ItemImage) {
   if (!item) {
