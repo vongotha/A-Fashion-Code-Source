@@ -234,7 +234,7 @@ if (!tablePath) {
 
             const notFoundSvg = document.createElement('img');
             notFoundSvg.style.opacity = '0.5';
-            
+
             // Le chemin de l'image est peut-être incorrect, vérifie-le
             notFoundSvg.src = '../images/Background/table_NotFound.svg';
             notFoundSvg.alt = 'Table Not Found';
@@ -549,6 +549,7 @@ export function createCarrouselItems(listOfItems, idContainer) {
 /**
  *  LIST OF CSV DATA NAMES
 */
+
 export const allItemsTablesNames = [
   "blouse-asos-oversized_colar_blouse-women-sizes.csv",
   "blouse-banana republic-cowl_neck-women-sizes.csv",
@@ -614,7 +615,7 @@ export function getRandomItems(allItemsObjects, count) {
  */
 export const allItemsObjects = createListOfItems(allItemsTablesNames)
 
-export const randomItems = getRandomItems(allItemsObjects,20);
+export const randomItems = getRandomItems(allItemsObjects,26);
 
 
 function getRequestImages(item, ItemImage) {
