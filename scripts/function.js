@@ -1,3 +1,5 @@
+import { allItemsTablesNames } from "../src/productsNameFile.js"
+
 /**
  * 
  * @param {Object} list 
@@ -549,36 +551,6 @@ export function createCarrouselItems(listOfItems, idContainer) {
 /**
  *  LIST OF CSV DATA NAMES
 */
-
-export const allItemsTablesNames = [
-  "blouse-asos-oversized_colar_blouse-women-sizes.csv",
-  "blouse-banana republic-cowl_neck-women-sizes.csv",
-  "blouse-h&m-v_neck_blouse-women-sizes.csv",
-  "blouse-zara-romantic_embroidered-women-sizes.csv",
-  "bottom-adidas-sportswear_pant-men-sizes.csv",
-  "bottom-gap-cargo_pants-men-sizes.csv",
-  "bottom-levi's-slim_fit-men-sizes.csv",
-  "bottom-nike-showtime_pant-men-sizes.csv",
-  "bottom-none-joggers-women-sizes.csv",
-  "bottom-none-pant-men-sizes.csv ",
-  "dress-asos-formal_dress-women-sizes.csv",
-  "dress-banana republic-aurelia_satin_trapeze-women-sizes.csv",
-  "dress-h&m-drawstring-women-sizes.csv",
-  "dress-none-blouse-women-sizes.csv",
-  "dress-old navy-floral_midi_dress-women-sizes.csv",
-  "dress-zara-pink_dress-women-sizes.csv",
-  "lingerie-women-babydolls-women-sizes.csv",
-  "outwear-none-jacket-men-sizes.csv",
-  "shoes-none-open_toe-women-sizes.csv",
-  "shoes-none-sneakers-men-sizes.csv",
-  "sweater-asos-burgundy_sweater-women-sizes.csv",
-  "sweater-h&m-shimmery_rib-women-sizes.csv",
-  "top-adidas-shirt-men-sizes.csv",
-  "top-levi's-shirt-men-sizes.csv",
-  "top-nike-shirt-men-sizes.csv",
-  "top-none-shirt-men-sizes.csv",
-  "top-none-shirt-women-sizes.csv",
-]
 
 export function asssignActiveClass () {
   const currentPagePath = window.location.pathname;
