@@ -547,11 +547,6 @@ export function createCarrouselItems(listOfItems, idContainer) {
   })
 }
 
-
-/**
- *  LIST OF CSV DATA NAMES
-*/
-
 export function asssignActiveClass () {
   const currentPagePath = window.location.pathname;
 
