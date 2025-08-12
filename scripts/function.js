@@ -326,20 +326,22 @@ function processCSV(csvString) {
  * CREATE ITEM FROM FILE NAME
  */
 
-function createItemFromFileName (nameCsvFile,imagesFolder) {
-  const nomBase = nameCsvFile.replace('-sizes.csv','')
-  const parts = nomBase.split('-')
-  const repoName = 'A-Fashion-Code-Source'
-  const categories = capitalize(parts[0])
-  const brand = capitalize(parts [1])
-  const nameBrief = capitalize(parts.slice(2,-1).join('-'))
-  const gender = capitalize(parts[parts.length - 1])
-
-  const imageOffUrl = "../images/Background/image_Off.svg"
-
+function createItemFromFileName(nameCsvFile, imagesFolder) {
+  const nomBase = nameCsvFile.replace('-sizes.csv', '');
+  const parts = nomBase.split('-');
+  const repoName = 'A-Fashion-Code-Source';
+  const categories = capitalize(parts[0]);
+  const brand = capitalize(parts[1]);
+  
+  let nameBrief = capitalize(parts.slice(2, -1).join('-'));
+  nameBrief = nameBrief.replace(/_/g, ' '); // Remplace tous les '_' par des espaces
+  
+  const gender = capitalize(parts[parts.length - 1]);
+  const imageOffUrl = "../images/Background/image_Off.svg";
   const id = nomBase;
   const nameArticle = `${nameBrief} ${gender}`;
   const imageLink = `../images/${imagesFolder}/${gender}/${nomBase}.png`;
+  
   return {
     Id: id,
     Nom: nameArticle,
@@ -350,7 +352,7 @@ function createItemFromFileName (nameCsvFile,imagesFolder) {
     Describe: nameBrief,
     Table: `../data/${nameCsvFile}`,
     imageNotFound: imageOffUrl
-  }
+  };
 }
 
 export function recreateItemFromID (nameCsvFile,imagesFolder) {
