@@ -304,6 +304,17 @@ fieldset {
     overflow-y: auto;
 }
 
+.mainBlur {
+    position: sticky;
+    height: 3vh;
+    bottom: 0;
+    padding: 0 50px;
+    width: 1124px;
+    mask: linear-gradient(to top,rgb(120, 180, 230), rgb(223, 98, 196), transparent);
+    backdrop-filter: blur(4px);
+    pointer-events: none;
+}
+
 .animateContent {
     animation: moveInUp .3s forwards;
 }
