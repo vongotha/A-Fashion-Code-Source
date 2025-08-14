@@ -351,6 +351,9 @@ fieldset {
 .infoMain {
     width: 250px;
     height: 90px;
+    background-color: #faf8f8;
+    padding-left: 10px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
