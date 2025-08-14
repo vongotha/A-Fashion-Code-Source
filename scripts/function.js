@@ -413,6 +413,8 @@ export function createMainHTMLItem(listOfItems) {
   const container = document.getElementById('main');
 
   container.innerHTML = ''
+  const blurDiv = document.createElement('div')
+  blurDiv.classList.add('mainBlur')
   listOfItems.forEach(item => {
     const div = document.createElement('div');
 
@@ -442,6 +444,7 @@ export function createMainHTMLItem(listOfItems) {
     
     getRequestImages(item,ItemImage);
   });
+  container.appendChild(blurDiv);
 }
 
 export function createHTMLCarrouselItemTables(listOfItems) {
