@@ -2,39 +2,6 @@
 * {
     font-family: 'Signika', sans-serif;
 }
-
-.lowerContent-container {
-    /*position: relative;*/
-    margin: 0;
-    height: 400px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-/*
-.blurContainer {
-
-    margin: 0;
-    position: relative;
-    height: 30px;
-    width: 100%;
-    
-
-    z-index: 1000;
-}
-
-.layer {
-    margin: 0;
-    position: relative;
-    height: inherit;
-    width: 100%;
-    mask: linear-gradient(blue, black, transparent);
-    backdrop-filter: blur(10px);
-
-}
-*/
 .lowerContent {
     position: relative;
     margin: 0;
@@ -56,11 +23,6 @@
     font-size: 36px;
     font-weight: 400;
     color: #414141;
-}
-
-.blur-container {
-    height: 50px;
-    background-color: black;
 }
 
 .arrows {
