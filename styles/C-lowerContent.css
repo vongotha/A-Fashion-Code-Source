@@ -96,6 +96,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: start;
+    padding: 0 10px;
 }
 
 .info button {
