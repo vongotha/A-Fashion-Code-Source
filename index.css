@@ -86,7 +86,7 @@ body, html {
 
 .showcase {
     height: 70rem;
-    width: auto;
+    width: 100vw;
     z-index: 1020;
     background-color: #FAF7FF;
 }
@@ -100,9 +100,9 @@ body, html {
 }
 
 .disblay h3 {
-    margin: 50px 0;  
+    margin: 3.125rem 0;  
     font-family: 'Signika Negative' , sans-serif;
-    font-size: 32px;
+    font-size: 2rem;
     color: #414141;
     text-align: center;
 }
@@ -112,11 +112,12 @@ body, html {
     margin-block-start: 0;
     font-family: 'Nunito Sans' , sans-serif;
     font-weight: 100;
-    font-size: 32px;
+    font-size: 2rem;
     color: #414141;
+    padding: 0 3rem;
     text-align: center;
     opacity: 60%;
-    max-width: 1200px;
+    max-width: 78rem;
 }
 
 .disblay {
@@ -128,8 +129,8 @@ body, html {
 }
 
 .carousel {
-    height: 270px;
-    width: 1220px;
+    height: 17rem;
+    width: 76rem;
     position: relative;
 
     margin-top: 50px;
@@ -502,6 +503,16 @@ body, html {
     .heading h2 {
         font-size: 1.2rem;
         max-width: 25rem;
+    }
+
+    .showcase {
+        height: auto;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .disblay h4 {
+        font-size: 1.5rem; 
     }
 }
 
