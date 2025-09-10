@@ -85,8 +85,9 @@ body, html {
 /* SHOWCASE OF ARTCLES */
 
 .showcase {
+    margin: 0;
     height: 70rem;
-    width: auto;
+    width: 100vw;
     z-index: 1020;
     background-color: #FAF7FF;
 }
@@ -99,10 +100,15 @@ body, html {
     align-content: center;
 }
 
+.disblay {
+    margin: 0;
+    height: 49rem;
+    width: 100vw;
+}
 .disblay h3 {
-    margin: 50px 0;  
+    margin: 3.125rem 0;  
     font-family: 'Signika Negative' , sans-serif;
-    font-size: 32px;
+    font-size: 2rem;
     color: #414141;
     text-align: center;
 }
@@ -112,11 +118,12 @@ body, html {
     margin-block-start: 0;
     font-family: 'Nunito Sans' , sans-serif;
     font-weight: 100;
-    font-size: 32px;
+    font-size: 2rem;
     color: #414141;
+    padding: 0 3rem;
     text-align: center;
     opacity: 60%;
-    max-width: 1200px;
+    max-width: 78rem;
 }
 
 .disblay {
@@ -128,8 +135,8 @@ body, html {
 }
 
 .carousel {
-    height: 270px;
-    width: 1220px;
+    height: 17rem;
+    width: 76rem;
     position: relative;
 
     margin-top: 50px;
@@ -261,14 +268,18 @@ body, html {
 /* Services */
 
 .services {
-    margin: 0;
-    height: 910px;
-    width: auto;
+    width: 100vw;
+    height: 50rem;
     color: #FAF7FF;
     background-color: #8685ef;
     position: relative;
-    padding: 0 60px;
     z-index: 4;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
 }
 
 .services h3 {
@@ -289,22 +300,23 @@ body, html {
 }
 
 .Experience {
-    height: 455px;
-    /*padding: 20px 0;*/
+    width: 70rem;
+    height: 26rem;
+    padding: 1.25rem 1.25rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     align-content: center;
 }
 
 .Expert {
-    height: 455px;
-    /*padding: 20px 0;*/
-    width: auto;
+    width: 70rem;
+    height: 26rem;
+    padding: 1.25rem 1.25rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     align-content: center;
 }
@@ -321,6 +333,8 @@ body, html {
     width: 500px;
     height: 400px;
     background: no-repeat center center / cover url(images/Background/Services_Experience.png);
+    background-position: center;
+    /* background-attachment: fixed; */
     box-shadow: -1px -1px 10px #e2e0e6;
 }
 
@@ -503,8 +517,57 @@ body, html {
         font-size: 1.2rem;
         max-width: 25rem;
     }
-}
 
+    .showcase {
+        height: auto;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .disblay {
+        height: auto;
+        width: 100%;
+        padding: 0 1rem;
+    }
+    .disblay h4 {
+        font-size: 1.8rem; 
+    }
+
+    .carousel {
+        width: 50rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .services {
+        width: 100vw;
+    }
+}
+@media only screen and (max-width: 1040px) {
+    .carousel {
+        width: 40rem;
+    }
+
+    .first {
+        transform: scale(0.8);
+    }
+
+    .first-img {
+        transform: scale(0.8);
+    }
+
+    .second {
+        transform: scale(0.8);
+        padding: 20px 10px;
+    }
+
+    .second-img {
+        transform: scale(0.8);
+    }
+}
 @media only screen and (max-width: 878px) {
 
     .hero {
@@ -526,10 +589,26 @@ body, html {
     }
     .heading h2 {
         text-align: center;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         max-width: 30rem;
     }
     .drawer {
         display: none;
+    }
+
+    .showcase {
+        height: 100vh;
+        width: 100%;
+        padding: 0 1rem;
+    }
+    .carousel, .table {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .disblay h4 {
+        font-size: 1.8rem;
+        max-width: 25rem;
     }
 }
