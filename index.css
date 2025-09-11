@@ -349,9 +349,9 @@ body, html {
 /* Brands */
 
 .brands {
-    height: 416px;
+    height: 26rem;
     width: auto;
-    padding: 50px;
+    padding: 3.125rem 0;
     background-color: #FAF7FF;
 }
 
@@ -378,6 +378,7 @@ body, html {
     font-size: 32px;
     color: #595767;
     text-align: center;
+    padding: 0 1.8rem;
 }
 
 .brand-logos {
@@ -388,7 +389,8 @@ body, html {
 .brand-logos {
     display: flex;
     flex-direction: row;
-    justify-content: space-around
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .brand-logos {
@@ -545,6 +547,17 @@ body, html {
     .services {
         width: 100vw;
     }
+
+    .brands h4 {
+        max-width: 45rem;
+    }
+
+    .brand-logos {
+        width: 100%;
+        padding: 0 1.25rem;
+        gap: 1.25rem;
+        flex-wrap: wrap;
+    }
 }
 @media only screen and (max-width: 1040px) {
     .carousel {
@@ -567,6 +580,7 @@ body, html {
     .second-img {
         transform: scale(0.8);
     }
+
 }
 @media only screen and (max-width: 878px) {
 
@@ -604,11 +618,20 @@ body, html {
     .carousel, .table {
         display: none;
     }
+    
+    .brand1, .brand2, .brand3, .brand4, .brand5, .brand6, .brand7, .brand8 {
+        transform: scale(0.8);
+        background-size: contain;
+    }
 }
 
 @media only screen and (max-width: 650px) {
     .disblay h4 {
         font-size: 1.8rem;
         max-width: 25rem;
+    }
+
+    .brands h4 {
+        font-size: 1.5rem;
     }
 }
