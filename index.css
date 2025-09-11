@@ -85,9 +85,8 @@ body, html {
 /* SHOWCASE OF ARTCLES */
 
 .showcase {
-    margin: 0;
+    width: 100%;
     height: 70rem;
-    width: 100vw;
     z-index: 1020;
     background-color: #FAF7FF;
 }
@@ -103,7 +102,7 @@ body, html {
 .disblay {
     margin: 0;
     height: 49rem;
-    width: 100vw;
+    width: 100%;
 }
 .disblay h3 {
     margin: 3.125rem 0;  
@@ -133,10 +132,9 @@ body, html {
     align-items: center;
     align-content: center;
 }
-
 .carousel {
     height: 17rem;
-    width: 76rem;
+    width: 100%;
     position: relative;
 
     margin-top: 50px;
@@ -271,7 +269,7 @@ body, html {
     width: 100vw;
     height: 50rem;
     color: #FAF7FF;
-    background-color: #8685ef;
+    background-color: #414141;
     position: relative;
     z-index: 4;
 
@@ -300,9 +298,9 @@ body, html {
 }
 
 .Experience {
-    width: 70rem;
+    width: 100%;
     height: 26rem;
-    padding: 1.25rem 1.25rem;
+    padding: 1.1rem 1.3rem;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -311,12 +309,13 @@ body, html {
 }
 
 .Expert {
-    width: 70rem;
+    width: 100%;
     height: 26rem;
     padding: 1.25rem 1.25rem;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    gap: 2rem;
     align-items: center;
     align-content: center;
 }
@@ -329,19 +328,31 @@ body, html {
     text-align: left;
 }
 
+.containerImage {
+    width: 30rem;
+    height: 20rem;
+    margin: 0 1.875rem;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .eximage {
-    width: 500px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
+
     background: no-repeat center center / cover url(images/Background/Services_Experience.png);
+
     background-position: center;
-    /* background-attachment: fixed; */
     box-shadow: -1px -1px 10px #e2e0e6;
 }
 
 .chartimage {
-    width: 500px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     background: no-repeat center center / cover url(images/Background/Services-Brands.png);
+    background-position: center;
     box-shadow: 1px -1px 15px #5fe2b0;
 }
 
@@ -514,6 +525,15 @@ body, html {
     background-color: #FAF7FF;
 }
 
+@media screen and (max-width:1560px) {
+    .services {
+        width: 100%;
+        height: auto;
+        padding: 3rem 0;
+        background-color: #414141;
+    }
+}
+
 @media screen and (max-width:1240px) {
     .hero {
         gap : 2rem;
@@ -563,11 +583,47 @@ body, html {
         gap: 1.25rem;
         flex-wrap: wrap;
     }
+
+    .containerImage {
+        width: 25rem;
+        height: 20rem;
+    }
+
+    .services {
+        padding: 1.875rem 0;
+    }
+
+    .Experience  {
+        width: 62rem;
+        padding: 0 1.25rem;
+    }
+    .Expert  {
+        width: 62rem;
+        padding: 0 1.25rem;
+    }
+
+    .text h4 {
+        font-size: 1.3rem;
+        max-width: 25rem;
+    }
 }
 
 @media screen and (max-width: 1100px) {
     .h-footer {
         padding: 0 1.9rem; 
+    }
+
+    .services {
+        width: 100%;
+    }
+
+    .Experience  {
+        width: 100%;
+        padding: 0 1.25rem;
+    }
+    .containerImage {
+        width: 20rem;
+        height: 15rem;
     }
 }
 
@@ -596,6 +652,18 @@ body, html {
     .footMenu, .footservices {
         margin: 0 1rem;
     }
+    .services {
+        width: 100%;
+    }
+
+    .Experience  {
+        width: 100%;
+        padding: 0 1.25rem;
+    }
+    .containerImage {
+        width: 20rem;
+        height: 15rem;
+    }
 
 }
 
@@ -611,6 +679,18 @@ body, html {
         justify-content: space-evenly;
         align-content: center;
         align-items: center;
+    }
+    .services {
+        width: 100%;
+    }
+
+    .Experience  {
+        width: 100%;
+        padding: 0 1.25rem;
+    }
+    .containerImage {
+        width: 20rem;
+        height: 15rem;
     }
 }
 
@@ -652,6 +732,18 @@ body, html {
     .brand1, .brand2, .brand3, .brand4, .brand5, .brand6, .brand7, .brand8 {
         transform: scale(0.8);
         background-size: contain;
+    }
+    .services {
+        width: 100%;
+    }
+
+    .Experience  {
+        width: 100%;
+        padding: 0 1.25rem;
+    }
+    .containerImage {
+        width: 20rem;
+        height: 15rem;
     }
 }
 

@@ -458,9 +458,11 @@ export function createHTMLCarrouselItemTables(listOfItems) {
 
     element.addEventListener( 'animationend', () => {
       element.classList.remove('animateTable')
-    } )
+    } ) 
   })
+
   container.appendChild(prevButton);
+  
   listOfItems.forEach(item => {
 
     const lurre = document.createElement('div');
