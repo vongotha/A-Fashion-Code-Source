@@ -1,19 +1,20 @@
 footer {
-    height: 372px;
+    width: 100%;
+    height: 23.25rem;
     background-color: #414141;
     flex-shrink: 0;
 }
 
 .h-footer {
-    height: 312px;
-    width: auto;
+    width: inherit;
+    height: 19.5rem;
     background-color: #414141;
 }
 
 .h-footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-content: center;
     align-items: center;
 }
@@ -42,8 +43,9 @@ footer {
 }
 
 .footMenu {
-    width: 161px;
-    height: 223px;
+    width: 10rem;
+    height: 14rem;
+    white-space: nowrap;
 }
 
 .footMenu p {
@@ -75,8 +77,9 @@ footer {
 }
 
 .footservices {
-    width: 219px;
-    height: 223px;
+    width: 10rem;
+    height: 14rem;
+    white-space: nowrap;
 }
 
 .footservices p {
@@ -108,8 +111,10 @@ footer {
 }
 
 .contacts {
-    width: 281px;
-    height: 206px;
+    width: 17.563rem;
+    transform: scale(0.85);
+    /* height: 11rem;
+    margin: 0 1rem; */
 }
 
 .contacts {
@@ -119,31 +124,32 @@ footer {
 }
 
 .instagram {
-    width: 63px;
-    height: 60px;
+    width: 3.938rem;
+    height: 3.75rem;
     background: no-repeat center center / cover url(../images/logos/instagram-logo-facebook-2\ 1.png);
 }
 
 .facebook {
-    width: 63px;
-    height: 60px;
+    width: 3.938rem;
+    height: 3.75rem;
     background: no-repeat center center / cover url(../images/logos/facebook\ 1.png);
 }
 
 .twitter {
-    width: 63px;
-    height: 60px;
+    width: 3.938rem;
+    height: 3.75rem;
     background: no-repeat center center / cover url(../images/logos/twitter-logo-fill\ 1.png);
 }
 
 .social {
+    width: inherit;
     display: flex;
     justify-content: space-around;
 }
 
 .iconsText {
-    width: 300px;
-    height: 115px;
+    width: inherit;
+    height: 7.188rem;
 }
 
 .iconsText p {
@@ -191,8 +197,8 @@ footer {
 }
 
 .l-footer {
+    width: 100%;
     height: 60px;
-    width: auto;
     background-color: #414141;
 }
 

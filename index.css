@@ -458,7 +458,8 @@ body, html {
 
 .lastContent {
     position: relative;
-    height: 402px;
+    width: 100%;
+    height: 25rem;
     color: #FAF7FF;
     background: no-repeat center center / cover url(images/Background/showcase-background.jpg);
     z-index: 1001;
@@ -469,17 +470,21 @@ body, html {
     font-weight: 100;
     margin-block-start: 0;
     margin-block-end: 0;
-    font-size: 36px;
+    font-size: 2.25rem;
+    text-align: center;
     color: #FAF7FF;
     opacity: .5;
+    padding: 0 1.2rem;
 }
 
 .lastContent h3 {
     font-family: 'Signika Negative' , sans-serif;
     margin-block-start: 0;
     margin-block-end: 0;
-    font-size: 32px;
+    font-size: 2rem;
+    text-align: center;
     color: #FAF7FF;
+    padding: 0 1rem;
 }
 
 .lastCta {
@@ -559,7 +564,14 @@ body, html {
         flex-wrap: wrap;
     }
 }
-@media only screen and (max-width: 1040px) {
+
+@media screen and (max-width: 1100px) {
+    .h-footer {
+        padding: 0 1.9rem; 
+    }
+}
+
+@media screen and (max-width: 1040px) {
     .carousel {
         width: 40rem;
     }
@@ -581,7 +593,27 @@ body, html {
         transform: scale(0.8);
     }
 
+    .footMenu, .footservices {
+        margin: 0 1rem;
+    }
+
 }
+
+@media screen and (max-width: 987px) {
+    .h-footer {
+        width: 42rem;
+        height: 19.5rem;
+        margin: 0 2rem;
+        padding: 0 0;
+        background-color: #414141;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-content: center;
+        align-items: center;
+    }
+}
+
 @media only screen and (max-width: 878px) {
 
     .hero {
@@ -609,7 +641,6 @@ body, html {
     .drawer {
         display: none;
     }
-
     .showcase {
         height: 100vh;
         width: 100%;
@@ -617,8 +648,7 @@ body, html {
     }
     .carousel, .table {
         display: none;
-    }
-    
+    } 
     .brand1, .brand2, .brand3, .brand4, .brand5, .brand6, .brand7, .brand8 {
         transform: scale(0.8);
         background-size: contain;
@@ -633,5 +663,9 @@ body, html {
 
     .brands h4 {
         font-size: 1.5rem;
+    }
+
+    .lastContent h4 {
+        font-size: 1.5rem;   
     }
 }
