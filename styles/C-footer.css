@@ -9,6 +9,7 @@ footer {
     width: inherit;
     height: 19.5rem;
     background-color: #414141;
+    padding: 0 1.2rem;
 }
 
 .h-footer {
@@ -215,4 +216,88 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: end;
+}
+
+@media screen and (max-width: 1040px) {
+    .contacts {
+        height: 12rem;
+        margin: 0 2rem;
+    }
+}
+
+@media screen and (max-width: 987px) {
+    .h-footer {
+        height: 28rem;
+        margin: 0;
+        padding: 0 1.5rem;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .contacts {
+        margin: 0 2rem;
+    }
+
+    hr {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .h-footer, .l-footer {
+        width: 100%;
+    }
+    .h-footer {
+        padding: 2.5rem 3rem;
+        height: fit-content;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .company h4 {
+        text-align: center;
+        max-width: 15rem;
+        line-height: 150%;
+        color: #FAF7FF;
+        opacity: .6;
+        margin: 0;
+    }
+
+    .footMenu {
+        width: 15rem;
+        height: 15rem;
+        white-space: nowrap;
+
+        justify-content: space-around;
+        align-items: center;
+    }
+    .footMenu p {
+        font-size: 2.5rem;
+        margin: 0 .5rem;
+    }
+    .footMenu a {
+        font-size: 1.5rem;
+    }
+
+    .footservices {
+        width: 15rem;
+        height: 15rem;
+        white-space: nowrap;
+
+        justify-content: space-around;
+        align-items: center;
+    }
+    .footservices p {
+        font-size: 2.5rem;
+        margin: 0 .5rem;
+    }
+    .footservices a {
+        font-size: 1.5rem;
+    }
+
+    .l-footer {
+        box-shadow: 0px -5px 500px #FAF7FF;
+    }
 }
