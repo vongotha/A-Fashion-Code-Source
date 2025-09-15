@@ -619,11 +619,25 @@ body, html {
 
     .Experience  {
         width: 100%;
-        padding: 0 1.25rem;
+        padding: 0 2.5rem;
+    }
+    .Expert  {
+        width: 100%;
+        padding: 0 2.5rem;
+    }
+
+    .Experience text h4 {
+        max-width: 400px;
+        font-size: 1rem;
+
+    }
+    .Expert text h4 {
+        max-width: 400px;
+        font-size: 1rem;
     }
     .containerImage {
-        width: 20rem;
-        height: 15rem;
+        width: 18rem;
+        height: 13rem;
     }
 }
 
@@ -686,7 +700,13 @@ body, html {
 
     .Experience  {
         width: 100%;
-        padding: 0 1.25rem;
+        padding: 0 3rem;
+        background-color: #414141;
+    }
+    .Expert  {
+        width: 100%;
+        padding: 0 3rem;
+        background-color: #414141;
     }
     .containerImage {
         width: 20rem;
@@ -738,8 +758,16 @@ body, html {
     }
 
     .Experience  {
-        width: 100%;
-        padding: 0 1.25rem;
+        width: calc(800px-50px);
+    }
+    .Experience text {
+        height: 15rem;
+    }
+    .Expert  {
+        width: calc(800px-50px);
+    }
+    .Expert text {
+        height: 15rem;
     }
     .containerImage {
         width: 20rem;
@@ -759,5 +787,9 @@ body, html {
 
     .lastContent h4 {
         font-size: 1.5rem;   
+    }
+
+    .containerImage {
+        display: none;
     }
 }
