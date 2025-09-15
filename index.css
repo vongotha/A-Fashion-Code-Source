@@ -681,6 +681,19 @@ body, html {
         height: 15rem;
     }
 
+    .brands {
+        height: 30rem;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .brand-logos {
+        padding-bottom: 10rem;
+    }
+
 }
 
 @media screen and (max-width: 987px) {
@@ -805,7 +818,17 @@ body, html {
     }
 
     .brands {
+        height: 40rem;
         width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .brand-logos {
+        padding-bottom: 20rem;
     }
     .brands h4 {
         width: 100%;
@@ -818,6 +841,9 @@ body, html {
 }
 
 @media only screen and (max-width: 480px) {
+    .hero {
+        background: no-repeat center / cover url(images/Background/hero-background.jpg);
+    }
     .brands {
         width: 100%;
     }
