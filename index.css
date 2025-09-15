@@ -34,6 +34,7 @@ body, html {
     font-size: 2.5rem;
     text-align: right;
     color: #414141;
+    padding: 0 0 0 3rem ;
 }
 
 .heading h2 {
@@ -681,6 +682,19 @@ body, html {
         height: 15rem;
     }
 
+    .brands {
+        height: 30rem;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .brand-logos {
+        padding-bottom: 10rem;
+    }
+
 }
 
 @media screen and (max-width: 987px) {
@@ -722,7 +736,7 @@ body, html {
         width: 100%;
     }
     .brand-logos {
-        width: 800px;
+        width: 50rem;
     }
 }
 
@@ -788,8 +802,8 @@ body, html {
 
 @media only screen and (max-width: 650px) {
     .disblay h4 {
-        font-size: 1.8rem;
-        max-width: 25rem;
+        font-size: 1.5em;
+        padding: none;
     }
 
     .brands h4 {
@@ -805,7 +819,17 @@ body, html {
     }
 
     .brands {
+        height: 40rem;
         width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .brand-logos {
+        padding-bottom: 20rem;
     }
     .brands h4 {
         width: 100%;
@@ -818,10 +842,63 @@ body, html {
 }
 
 @media only screen and (max-width: 480px) {
+    .hero {
+        background: no-repeat center / cover url(images/Background/hero-background.jpg);
+        height: 35rem;
+    }
+
+    .disblay h3 {
+        font-size: 1.5rem;
+    }
+    .disblay h4 {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .carousel {
+        width: 10rem;
+    }
+
+    /* .table {
+        display: block;
+        transform: scale(0.6);
+    } */ 
+
+    .brand-logos {
+        transform: scale(0.8);
+    }
+
     .brands {
         width: 100%;
     }
+
     .brands h3 {
+        font-size: 1.5rem;
+    }
+    .brands h4 {
+        font-size: 1rem;
+        margin: 1rem 0;
+    }
+
+    .services {
         width: 100%;
+        height: 40rem;
+    }
+    .text {
+        justify-content: space-evenly;
+    }
+
+    .text h3 {
+        font-size: 1.5rem;
+    }
+    .text h4 {
+        font-size: 1rem;
+    }
+
+    .lastContent h3 {
+        font-size: 1.5rem;
+    }
+    .lastContent h4 {
+        font-size: 1rem;
     }
 }
