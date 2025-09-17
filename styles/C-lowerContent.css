@@ -2,6 +2,11 @@
 * {
     font-family: 'Signika', sans-serif;
 }
+
+.slick-slide:not(.slick-active) {
+  opacity: 0;
+  transition: opacity 0.5s ease; /* Optional: adds a fade effect */
+}
 .lowerContent {
     position: relative;
     margin: 0;
@@ -58,7 +63,7 @@
 }
 
 .suggestions {
-    width: 1215px;
+    width: 75rem;
     height: 45px;
     margin-bottom: 20px;
 
@@ -69,9 +74,9 @@
 }
 
 .miniCarousel {
-    width: 1066px;
+    width: 50rem;
     height: 290px;
-    margin-left: 106px;
+    margin-left: 6.625rem;
 }
 .item1 {
     width: 250px;
@@ -187,4 +192,66 @@
 .first-img {
     width: 200px;
     height: 180px;
+}
+
+@media only screen and (max-width: 1382px) {
+    .suggestions {
+        width: 75rem;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .suggestions {
+        width: 65rem;
+    }
+    .miniCarousel {
+        width: 43rem;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    .suggestions {
+        width: 55rem;
+    }
+    .miniCarousel {
+        width: 42rem;
+        margin: 0 2rem;
+    }
+}
+@media only screen and (max-width: 1040px) {
+    .suggestions {
+        width: 45rem;
+    }
+    .miniCarousel {
+        width: 41rem;
+        margin: 0 2rem;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .suggestions {
+        width: 35rem;
+    }
+    .suggestions h2 {
+        font-size: 1.5rem;
+    }
+
+    .arrows {
+        transform: scale(0.8);
+    }
+
+    .miniCarousel {
+        width: 27rem;
+        margin: 0 2rem;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .suggestions {
+        width: 20rem;
+        justify-content: space-between;
+    }
+
+    .miniCarousel {
+        width: 20rem;
+        margin: 0 3rem;
+        padding: 0 3.5rem;
+    }
 }
