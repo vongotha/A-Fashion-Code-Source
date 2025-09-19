@@ -298,6 +298,7 @@ fieldset {
     width: 75rem;
     height: 58.125rem;
     background-color: #F9F7F7;
+    margin: 0;
     padding: 0 1rem;
     display: flex;
     flex-direction: row;
