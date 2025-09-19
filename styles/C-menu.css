@@ -13,6 +13,8 @@
     z-index: 1000;
 }
 
+
+
 .active-nav {
     text-decoration: underline !important;
     text-decoration-thickness: 20% !important;
@@ -85,6 +87,18 @@
     .navbar a {
         white-space: nowrap;
         padding: 0px 20px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .navbar a {
+        font-size: 1rem;
+    }
+
+    .buttons {
+        font-size: 0.6rem;
+        height: 1.2rem;
+        width: 2rem;
     }
 }
 

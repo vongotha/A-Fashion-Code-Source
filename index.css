@@ -581,8 +581,9 @@ body, html {
     }
 
     .brand-logos {
-        width: 100%;
-        padding: 0 1.25rem;
+        width: 50rem;
+        padding: 0 3rem;
+        margin: 0 0 2rem 0;
         gap: 1.25rem;
         flex-wrap: wrap;
     }
@@ -736,7 +737,7 @@ body, html {
         width: 100%;
     }
     .brand-logos {
-        width: 50rem;
+        width: 45rem;
     }
 }
 
@@ -797,6 +798,10 @@ body, html {
     .containerImage {
         width: 20rem;
         height: 15rem;
+    }
+
+    .brand-logos {
+        width: 40rem;
     }
 }
 
