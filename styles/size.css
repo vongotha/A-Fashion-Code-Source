@@ -127,10 +127,11 @@ select:hover {
 .sidebar {
     position: relative;
     overflow-y: auto;
-    font-size: 24px;
-    width: 310px;
-    height: 930px;
+    font-size: 1.5rem;
+    width: 19.375rem;
+    height: 58.125rem;
     background-color: #F9F7F7;
+    /*background-color: #a0a0ca;*/
     box-shadow: 0 4px 30px rgba(0, 0, 0, .05);
 }
 
@@ -294,8 +295,8 @@ fieldset {
     opacity: 80%;
 }
 .main {
-    width: 1200px;
-    height: 930px;
+    width: 75rem;
+    height: 58.125rem;
     background-color: #F9F7F7;
     padding: 0 1rem;
     display: flex;
@@ -438,6 +439,17 @@ fieldset {
     }
 }
 
+@media only screen and (max-width: 2000px) {
+    .container {
+        padding: 0 2rem;
+        justify-content: space-evenly;
+    }
+}
+@media only screen and (max-width: 1382px) {
+    .sidebar {
+        width: 17rem;
+    }
+}
 
 @media only screen and (max-width: 1250px) {
     main {
@@ -445,13 +457,18 @@ fieldset {
     }
 }
 @media only screen and (max-width: 1100px) {
-    main {
-        width: 100%;
+    .sidebar {
+        width: 14rem;
+    }
+}
+@media only screen and (max-width: 987px) {
+    .head select {
+        width: 5rem;
     }
 }
 @media only screen and (max-width: 878px) {
-    main {
-        width: 100%;
+    .sidebar {
+        display: none;
     }
 }
 @media only screen and (max-width: 650px) {
@@ -473,6 +490,10 @@ fieldset {
 
         display: flex;
         justify-content: space-evenly;
+    }
+
+    .head select {
+        width: 3.8rem;
     }
 }
 
