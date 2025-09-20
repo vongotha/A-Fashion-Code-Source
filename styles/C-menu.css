@@ -84,6 +84,19 @@
 }
  
 @media only screen and (max-width: 878px) {
+    .navigation {
+    position: fixed;
+    padding: 1.25rem 3.125rem;
+    height: 4.375rem;
+    width: 100%;
+    background-color: #414141;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0rem 0rem 0.313rem #000;
+    z-index: 1000;
+}
     .navbar a {
         white-space: nowrap;
         padding: 0px 20px;
@@ -91,17 +104,46 @@
 }
 
 @media only screen and (max-width: 650px) {
+    .navigation {
+        position: fixed;
+        width: 100%;
+        height: 2.5rem;
+        display: flex; /* Use flexbox for the main container */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem; /* Increase padding for better spacing */
+        z-index: 1000;
+    }
+
+    .logo img {
+        width: 80px; /* Reduce image width to save space */
+    }
+
+    .navbar {
+        flex-grow: 1; /* Allow the navbar to take up available space */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; /* Use space-around for even spacing */
+        align-items: center;
+        margin: 0 10px; /* Add some margin between the logo and button */
+    }
+
     .navbar a {
-        font-size: 1rem;
+        font-size: 1rem; /* Make font size slightly smaller */
     }
 
     .buttons {
-        font-size: 0.6rem;
-        height: 1.2rem;
-        width: 2rem;
+        flex-shrink: 0; /* Prevent the buttons container from shrinking */
+    }
+
+    .buttons button {
+        width: auto; /* Let the button's width be determined by its content */
+        height: 25px; /* Let the button's width be determined by its content */
+        padding: 5px 10px; /* Add padding for a good button size */
+        font-size: 12px; /* Reduce font size to fit on smaller screens */
     }
 }
-
 @media only screen and (max-width: 480px) {
 
     #navigation-on, #navigation-off {
@@ -133,9 +175,6 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-    }
-    .navbar a {
-        width: 100%;
     }
 }
 
