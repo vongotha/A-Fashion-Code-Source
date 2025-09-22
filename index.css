@@ -849,7 +849,6 @@ body, html {
 @media only screen and (max-width: 480px) {
     .hero {
         background: no-repeat center / cover url(images/Background/hero-background.jpg);
-<<<<<<< HEAD
         height: 35rem;
     }
 
@@ -874,9 +873,6 @@ body, html {
         transform: scale(0.8);
     }
 
-=======
-    }
->>>>>>> d29cf685601872ea73d40fd1b1f797b0be5b5537
     .brands {
         width: 100%;
     }
