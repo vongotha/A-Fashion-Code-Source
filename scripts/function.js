@@ -480,7 +480,6 @@ export function createHTMLCarrouselItemTables(listOfItems) {
   const nextButton = document.createElement('button');
   nextButton.classList.add('arrow-right');
   nextButton.addEventListener('click', () => {
-    console.log('animate')
     const element = document.getElementById('tableContainer')
     element.classList.add("animateTable")
 
@@ -489,6 +488,28 @@ export function createHTMLCarrouselItemTables(listOfItems) {
     } )
   })
   container.appendChild(nextButton);
+  
+  /* $(document).ready(function () {
+    $('.carousel').slick({
+      infinite: false,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      arrows: false,
+      autoplay: false,
+      autoplaySpeed: 3000,
+    })
+
+    const nextButton = $('.arrow-right')
+    const prevButton = $('.arrow-left') */
+
+    /* prevButton.on('click', function () {
+      $('.carousel').slick('slickPrev')
+    })
+    nextButton.on('click', function () {
+      $('.carousel').slick('slickNext')
+    })
+    }) */
+  
 }
 
 
