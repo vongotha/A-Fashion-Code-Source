@@ -51,19 +51,3 @@ function prevSlide() {
   slideIndex--
   showSlides(slideIndex);
 }
-
-// Matching Windows Size for Carrousel
-
-const MediaMacth_404px = window.matchMedia('(max-width: 480px)');
-
-function handleMediaChange(e) {
-  if (e.matches) {
-    console.log("Now change");
-  } else {
-    console.log("Not yet --- ")
-  }
-}
-
-handleMediaChange(MediaMacth_404px);
-
-MediaMacth_404px.addEventListener(handleMediaChange);
