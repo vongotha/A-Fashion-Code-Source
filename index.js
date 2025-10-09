@@ -2,10 +2,6 @@ import { addTableToHTML,randomItems,allItemsObjects, getRandomItems, createHTMLC
 
 const itemsHomePage = getRandomItems(allItemsObjects, 3)
 
-const slides = document.getElementsByClassName('first');
-let slideIndex = 1;
-let intervalId = null;
-
 document.addEventListener('DOMContentLoaded', () => {
   asssignActiveClass()
   initializeCarousel()
