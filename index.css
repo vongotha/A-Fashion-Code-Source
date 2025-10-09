@@ -107,7 +107,7 @@ body, html {
     margin: 0;
 }
 .disblay h3 {
-    margin: 3.125rem 0;  
+    margin: .5rem 0;  
     font-family: 'Signika Negative' , sans-serif;
     font-size: 2rem;
     color: #414141;
@@ -119,12 +119,12 @@ body, html {
     margin-block-start: 0;
     font-family: 'Nunito Sans' , sans-serif;
     font-weight: 100;
-    font-size: 2rem;
+    font-size: 1.4rem;
     color: #414141;
-    padding: 0 3rem;
+    padding: 1rem 3rem;
     text-align: center;
     opacity: 60%;
-    max-width: 78rem;
+    max-width: 60rem;
 }
 
 .disblay {
@@ -134,13 +134,88 @@ body, html {
     align-items: center;
     align-content: center;
 }
+
+.containerButtonCarousel {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+#carouselContainer {
+    width: 15rem;
+}
+
 .carousel {
     height: 17rem;
     width: 100%;
     position: relative;
+}
+/* Conteneur slick : centre verticalement les slides */
+#carouselContainer .slick-list {
+  overflow: none; /* permet ombre/scale sans clip */
+}
 
-    margin-top: 50px;
-    margin-bottom: 50px;
+#carouselContainer .slick-track {
+  display: flex;
+  align-items: center; /* aligne les slides verticalement */
+}
+
+/* wrapper fourni par toi à l'intérieur de chaque slick-slide */
+#carouselContainer .first {
+  box-sizing: border-box;
+  display: block;          /* laisse Slick gérer la largeur de la slide */
+  max-width: 320px;        /* empêche l'étirement horizontal excessif */
+  margin: 0 8px;           /* espace entre slides */
+  transition: transform 220ms ease, box-shadow 220ms ease;
+  width: auto !important;  /* évite que .first devienne 100% */
+  align-self: center;      /* pour s'aligner au centre du track */
+}
+
+/* style visuel pour la slide active (la "second" dans ton code) */
+#carouselContainer .first.second {
+  transform: scale(1.06);           /* mise en avant légère */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+  z-index: 5;                       /* devant les autres slides */
+}
+
+/* s'assurer que slick-slide centre le contenu (évite étirement) */
+#carouselContainer .slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* boutons flèches: s'assurer de leur z-index */
+.arrow-left, .arrow-right {
+    position: relative;
+    width: 2.5rem;
+    height: 5rem;
+    border: none;
+    border-radius: 50%;
+    z-index: 10;  
+}
+
+/* Debug utile (à retirer ensuite) */
+#carouselContainer.debug .first { outline: 1px dashed rgba(0,0,0,0.08); }
+
+.carousel .slick-slide {
+    /* Le box-sizing est essentiel pour que le padding n'augmente pas la taille totale */
+    box-sizing: border-box; 
+    
+    /* Ajouter un espace entre les items 
+    padding: 0 10px; */
+}
+
+.containerButtonCarousel {
+    width: 50rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
 }
 
 .carousel {
@@ -151,14 +226,6 @@ body, html {
     align-content: center;
 }
 
-.carousel button {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: none;
-    padding: 0 10px;
-    top: 50%;
-}
 .arrow-right {
     background: no-repeat center center / contain url(images/Background/right-chevron.svg);
 }
@@ -911,4 +978,10 @@ body, html {
     .lastContent h4 {
         font-size: 1rem;
     }
+}
+
+@media (max-width: 768px) {
+  #carouselContainer .first { max-width: 260px; }
+  #carouselContainer .first-img { height: 180px; }
+  #carouselContainer .first.second { transform: scale(1.03); max-width: 280px; }
 }

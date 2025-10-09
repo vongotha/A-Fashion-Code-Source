@@ -449,20 +449,14 @@ export function createMainHTMLItem(listOfItems) {
 
 export function createHTMLCarrouselItemTables(listOfItems) {
   const container = document.getElementById('carouselContainer');
-  
-  const prevButton = document.createElement('button');
-  prevButton.classList.add('arrow-left');
-  prevButton.addEventListener('click', () => {
-    const element = document.getElementById('tableContainer')
-    element.classList.add("animateTable")
+    
+  if ($(container).hasClass('slick-initialized')) {
+    // Détruire (unslick) l'ancienne instance avant d'injecter un nouveau contenu
+    $(container).slick('unslick');
+  }
 
-    element.addEventListener( 'animationend', () => {
-      element.classList.remove('animateTable')
-    } ) 
-  })
+  container.innerHTML = '';
 
-  container.appendChild(prevButton);
-  
   listOfItems.forEach(item => {
 
     const lurre = document.createElement('div');
@@ -475,41 +469,31 @@ export function createHTMLCarrouselItemTables(listOfItems) {
     getRequestImages(item);
     lurre.appendChild(ItemImage);
     container.appendChild(lurre);
+  });  
+
+  setTimeout(() => {
+  const container = $('#carouselContainer');
+  container.slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: false,
   });
 
-  const nextButton = document.createElement('button');
-  nextButton.classList.add('arrow-right');
-  nextButton.addEventListener('click', () => {
-    const element = document.getElementById('tableContainer')
-    element.classList.add("animateTable")
+  console.log("Slick initialized. Slides:", container.slick('getSlick').slideCount);
 
-    element.addEventListener( 'animationend', () => {
-      element.classList.remove('animateTable')
-    } )
-  })
-  container.appendChild(nextButton);
-  
-  /* $(document).ready(function () {
-    $('.carousel').slick({
-      infinite: false,
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      arrows: false,
-      autoplay: false,
-      autoplaySpeed: 3000,
-    })
+  $('.arrow-left').off('click').on('click', () => {
+    console.log("⬅️ arrow-left clicked");
+    container.slick('slickPrev');
+  });
 
-    const nextButton = $('.arrow-right')
-    const prevButton = $('.arrow-left') */
+  $('.arrow-right').off('click').on('click', () => {
+    console.log("➡️ arrow-right clicked");
+    container.slick('slickNext');
+  });
+}, 100);
 
-    /* prevButton.on('click', function () {
-      $('.carousel').slick('slickPrev')
-    })
-    nextButton.on('click', function () {
-      $('.carousel').slick('slickNext')
-    })
-    }) */
-  
 }
 
 
@@ -641,6 +625,7 @@ export function getRandomItems(allItemsObjects, count) {
 export const allItemsObjects = createListOfItems(allItemsTablesNames)
 
 export const randomItems = getRandomItems(allItemsObjects,26);
+
 
 
 function getRequestImages(item, ItemImage) {

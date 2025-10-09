@@ -1,49 +1,50 @@
-import { addTableToHTML,randomItems,allItemsObjects, getRandomItems, createHTMLCarrouselItemTables, asssignActiveClass } from "./scripts/function.js";
+import { addTableToHTML, allItemsObjects, getRandomItems, createHTMLCarrouselItemTables, asssignActiveClass } from "./scripts/function.js";
 
-const itemsHomePage = getRandomItems(allItemsObjects, 3)
+const itemsHomePage = getRandomItems(allItemsObjects, 3);
 
 document.addEventListener('DOMContentLoaded', () => {
-  asssignActiveClass()
-  initializeCarousel()
-}) 
+  asssignActiveClass();
+  initializeCarousel();
+});
 
 function initializeCarousel() {
-  createHTMLCarrouselItemTables(itemsHomePage)
-  const prevButton = document.querySelector('.arrow-left');
-  const nextButton = document.querySelector('.arrow-right');
-  prevButton.addEventListener('click', prevSlide);
-  nextButton.addEventListener('click', nextSlide);
-  if (slides.length > 0) {
-    slides[slideIndex].classList.add('second');
-    intervalId = setInterval(nextSlide, 3000);
-    clearInterval(intervalId);
-  }
+  createHTMLCarrouselItemTables(itemsHomePage);
 
-  showSlides(slideIndex);
-}
-
-function showSlides (index) {
-
-  if (index >= slides.length) {
-    slideIndex = 0;
-  }
-  else if (index < 0) {
-    slideIndex = slides.length - 1;
-  }
-  const slidesArray = [...slides];
-  slidesArray.forEach(item => {
-    item.classList.remove('second');
+  // ✅ Lier l’événement au bon conteneur
+  $('#carouselContainer').off('afterChange').on('afterChange', function(event, slick, currentSlide){
+    updateActiveSlide(currentSlide, itemsHomePage);
   });
+  
+  // Initialiser la première table
+  updateActiveSlide(0, itemsHomePage);
 
-  slides[slideIndex].classList.add('second');
-  addTableToHTML(itemsHomePage[slideIndex].Table);
+  console.log("Carousel initialized:", $('#carouselContainer').length > 0);
+  $('#carouselContainer').on('init', function() {
+    console.log("Slick initialized");
+  });
+  $('#carouselContainer').on('afterChange', function(event, slick, currentSlide){
+    console.log("Slide changed to:", currentSlide);
+  });
 }
-function nextSlide() {
-  slideIndex++
-  showSlides(slideIndex);
+
+function updateActiveSlide(currentIndex, itemArray) {
+  const $container = $('#carouselContainer');
+
+  // Si Slick n'est pas initialisé, on revient
+  if (!$container.hasClass('slick-initialized')) return;
+
+  // Récupérer l'instance Slick et ses slides réelles (jQuery collection)
+  const slick = $container.slick('getSlick');
+  if (!slick) return;
+
+  const $slides = $(slick.$slides); // slides "réelles" (sans clones)
+
+  // Retirer la classe sur toutes les vraies slides
+  $slides.removeClass('second');
+
+  // Mettre à jour la table (comme avant)
+  if (itemArray[currentIndex]) {
+    addTableToHTML(itemArray[currentIndex].Table);
+  }
 }
-function prevSlide() {
-  clearInterval(intervalId);
-  slideIndex--
-  showSlides(slideIndex);
-}
+
