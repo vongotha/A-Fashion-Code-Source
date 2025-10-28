@@ -212,6 +212,8 @@ export function addTableToHTML (tablePath) {
   const thead = document.createElement('thead')
   const tbody = document.createElement('tbody')
   let csvDataArray = [];
+
+  tableContainer.classList.remove('animateTable');
   
   // ...
 if (!tablePath) {
@@ -222,6 +224,7 @@ if (!tablePath) {
         if (!response.ok) {
             callTable.innerHTML = '';
             callTable.classList.add('tableNotFound');
+            tableContainer.classList.add('animateTable');
 
             const nameOfItem = createItemFromFileName(tablePath).Name;
             const nameMissingItem = document.createElement('p');
@@ -286,11 +289,13 @@ if (!tablePath) {
 
             table.appendChild(tbody);
             callTable.appendChild(table);
+            tableContainer.classList.add('animateTable');
         } else {
             const lostData = document.createElement('p');
             lostData.textContent = 'No data';
             table.appendChild(lostData);
             callTable.appendChild(table);
+            tableContainer.classList.add('animateTable');
         }
     })
     .catch(error => {
@@ -449,20 +454,14 @@ export function createMainHTMLItem(listOfItems) {
 
 export function createHTMLCarrouselItemTables(listOfItems) {
   const container = document.getElementById('carouselContainer');
-  
-  const prevButton = document.createElement('button');
-  prevButton.classList.add('arrow-left');
-  prevButton.addEventListener('click', () => {
-    const element = document.getElementById('tableContainer')
-    element.classList.add("animateTable")
+    
+  if ($(container).hasClass('slick-initialized')) {
+    // Détruire (unslick) l'ancienne instance avant d'injecter un nouveau contenu
+    $(container).slick('unslick');
+  }
 
-    element.addEventListener( 'animationend', () => {
-      element.classList.remove('animateTable')
-    } ) 
-  })
+  container.innerHTML = '';
 
-  container.appendChild(prevButton);
-  
   listOfItems.forEach(item => {
 
     const lurre = document.createElement('div');
@@ -475,20 +474,28 @@ export function createHTMLCarrouselItemTables(listOfItems) {
     getRequestImages(item);
     lurre.appendChild(ItemImage);
     container.appendChild(lurre);
+  });  
+
+  const $container = $('#carouselContainer');
+  $container.slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: false,
   });
 
-  const nextButton = document.createElement('button');
-  nextButton.classList.add('arrow-right');
-  nextButton.addEventListener('click', () => {
-    console.log('animate')
-    const element = document.getElementById('tableContainer')
-    element.classList.add("animateTable")
+  // 2. Attachement des gestionnaires de flèches (correctement)
+  $('.arrow-left').off('click').on('click', () => {
+    $container.slick('slickPrev');
+    // Ajouter ici votre logique d'animation de table si elle est séparée du afterChange
+  });
 
-    element.addEventListener( 'animationend', () => {
-      element.classList.remove('animateTable')
-    } )
-  })
-  container.appendChild(nextButton);
+  $('.arrow-right').off('click').on('click', () => {
+    $container.slick('slickNext');
+    // Ajouter ici votre logique d'animation de table
+  });
+
 }
 
 
@@ -544,7 +551,33 @@ export function createCarrouselItems(listOfItems, idContainer) {
       arrows: false,
       autoplay: false,
       autoplaySpeed: 3000,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 878,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 550,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ] 
     });
+
 
     const nextButton = $('.arrow-right')
     const prevButton = $('.arrow-left')
@@ -594,6 +627,7 @@ export function getRandomItems(allItemsObjects, count) {
 export const allItemsObjects = createListOfItems(allItemsTablesNames)
 
 export const randomItems = getRandomItems(allItemsObjects,26);
+
 
 
 function getRequestImages(item, ItemImage) {

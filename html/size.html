@@ -38,140 +38,142 @@
         </nav>
     </div>
 
-    <div class="intro">
-        <h2>FIND YOUR SIZE</h2>
-    </div>
-
-    <div class="frame">
-        <div class="head">
-            <h3>Categories</h3>
-
-            <div>
-                <form class="search-bar">
-                    <input type="search" class="search" name="search"  id="searchInput" required>
-                    <input type="image" class="submit" src="../images/Background/size-search-icon.png" id="">
-                </form>
-            </div>
-
-            <select name="brands" id="brand-select">
-                <option value="">All</option>
-                <option value="Nike">Nike</option>
-                <option value="Adidas">Adidas</option>
-                <option value="Asos">Asos</option>
-                <option value="H&M">H&M</option>
-                <option value="Zara">Zara</option>
-            </select>
+    <main>
+        <div class="intro">
+            <h2>FIND YOUR SIZE</h2>
         </div>
-        <div class="container">
 
-            <div class="sidebar">
-                
-                <fieldset class="gender">
-                    <legend>
-                        <div></div>
-                        Gender
-                    </legend>
-                  
-                    <div>
-                        <label for="All">All</label>
-                        <input type="radio" id="allGender" name="gender" value="All" checked/>
-                    </div>
-                  
-                    <div>
-                        <label for="Men">Men</label>
-                        <input type="radio" id="Men" name="gender" value="Men"/>
+        <div class="frame">
+            <div class="head">
+                <h3>Categories</h3>
+
+                <div>
+                    <form class="search-bar">
+                        <input type="search" class="search" name="search"  id="searchInput" required>
+                        <input type="image" class="submit" src="../images/Background/size-search-icon.png" id="">
+                    </form>
+                </div>
+
+                <select name="brands" id="brand-select">
+                    <option value="">All</option>
+                    <option value="Nike">Nike</option>
+                    <option value="Adidas">Adidas</option>
+                    <option value="Asos">Asos</option>
+                    <option value="H&M">H&M</option>
+                    <option value="Zara">Zara</option>
+                </select>
+            </div>
+            <div class="container">
+
+                <div class="sidebar">
+                    
+                    <fieldset class="gender">
+                        <legend>
+                            <div></div>
+                            Gender
+                        </legend>
+                    
+                        <div>
+                            <label for="All">All</label>
+                            <input type="radio" id="allGender" name="gender" value="All" checked/>
+                        </div>
+                    
+                        <div>
+                            <label for="Men">Men</label>
+                            <input type="radio" id="Men" name="gender" value="Men"/>
+                        </div>
+
+                        <div>
+                            <label for="neutral">Neutral</label>
+                            <input type="radio" id="neutral" name="gender" value="Neutral"/>
+                        </div>
+                    
+                        <div>
+                            <label for="women">Women</label>
+                            <input type="radio" id="women" name="gender" value="Women"/>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset class="categories">
+                        <legend>
+                            <div></div>
+                            All Clothes
+                        </legend>
+                    
+                        <div>
+                            <label for="All">All</label>
+                            <input type="checkbox" id="allCategories" value="All" checked/>
+                        </div>
+                    
+                        <div>
+                            <label for="Top">Top</label>
+                            <input type="checkbox" id="Top" class="categories" value="Top" />
+                        </div>
+                    
+                        <div>
+                            <label for="Pants">Bottom</label>
+                            <input type="checkbox" id="Bottom" class="categories" value="Bottom" />
+                        </div>
+
+                        <div>
+                            <label for="Shoes">Shoes</label>
+                            <input type="checkbox" id="Shoes" class="categories" value="Shoes" />
+                        </div>
+                    
+                        <div>
+                            <label for="Lingerie">Lingerie</label>
+                            <input type="checkbox" id="Lingerie" class="categories" value="Lingerie"/>
+                        </div>
+                    
+                        <div>
+                            <label for="Hats">Hats</label>
+                            <input type="checkbox" id="Hats" class="categories" value="Hats"/>
+                        </div>
+
+                        <div>
+                            <label for="Shoes">Shoes</label>
+                            <input type="checkbox" id="Shoes" class="categories" value="SHOES" />
+                        </div>
+
+                        <div>
+                            <label for="Dresses">Dresses</label>
+                            <input type="checkbox" id="Dresses" class="categories" value="DRESS"/>
+                        </div>
+                    </fieldset>
+
+                    <div class="sidebar-btn">
+                        <hr>
+                        <div class="container-btn">
+                            <button class="btn-reset" type="reset" value="Reset" id="resetButton">Reset</button>
+                            <button class="btn-apply" type="submit" value="Apply" id="apply">Apply</button>
+                        </div>
                     </div>
 
-                    <div>
-                        <label for="neutral">Neutral</label>
-                        <input type="radio" id="neutral" name="gender" value="Neutral"/>
-                    </div>
-                  
-                    <div>
-                        <label for="women">Women</label>
-                        <input type="radio" id="women" name="gender" value="Women"/>
-                    </div>
+                </div>
 
-                </fieldset>
+                <div id="main" class="main"></div>
 
-                <fieldset class="categories">
-                    <legend>
-                        <div></div>
-                        All Clothes
-                    </legend>
-                  
-                    <div>
-                        <label for="All">All</label>
-                        <input type="checkbox" id="allCategories" value="All" checked/>
-                    </div>
-                  
-                    <div>
-                        <label for="Top">Top</label>
-                        <input type="checkbox" id="Top" class="categories" value="Top" />
-                    </div>
-                  
-                    <div>
-                        <label for="Pants">Bottom</label>
-                        <input type="checkbox" id="Bottom" class="categories" value="Bottom" />
-                    </div>
+            </div>     
 
-                    <div>
-                        <label for="Shoes">Shoes</label>
-                        <input type="checkbox" id="Shoes" class="categories" value="Shoes" />
-                    </div>
-                  
-                    <div>
-                        <label for="Lingerie">Lingerie</label>
-                        <input type="checkbox" id="Lingerie" class="categories" value="Lingerie"/>
-                    </div>
-                  
-                    <div>
-                        <label for="Hats">Hats</label>
-                        <input type="checkbox" id="Hats" class="categories" value="Hats"/>
-                    </div>
+        </div>
 
-                    <div>
-                        <label for="Shoes">Shoes</label>
-                        <input type="checkbox" id="Shoes" class="categories" value="SHOES" />
-                    </div>
 
-                    <div>
-                        <label for="Dresses">Dresses</label>
-                        <input type="checkbox" id="Dresses" class="categories" value="DRESS"/>
-                    </div>
-                </fieldset>
+        <div class="lowerContent-container">
+            <div class="lowerContent">
 
-                <div class="sidebar-btn">
-                    <hr>
-                    <div class="container-btn">
-                        <button class="btn-reset" type="reset" value="Reset" id="resetButton">Reset</button>
-                        <button class="btn-apply" type="submit" value="Apply" id="apply">Apply</button>
+                <div class="suggestions">
+                    <h2>You May also like</h2>
+                    <div class="arrows">
+                        <div class="arrow-left"></div>
+                        <div class="arrow-right"></div>
                     </div>
                 </div>
 
+                <div class="miniCarousel" id="miniCarousel"></div>
             </div>
-
-            <div id="main" class="main"></div>
-
-        </div>        
-
-    </div>
-
-
-    <div class="lowerContent-container">
-        <div class="lowerContent">
-
-            <div class="suggestions">
-                <h2>You May also like</h2>
-                <div class="arrows">
-                    <div class="arrow-left"></div>
-                    <div class="arrow-right"></div>
-                </div>
-            </div>
-
-            <div class="miniCarousel" id="miniCarousel"></div>
         </div>
-    </div>
+    </main>
 
     <footer>
 

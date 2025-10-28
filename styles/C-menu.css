@@ -2,7 +2,7 @@
 .navigation {
     position: fixed;
     padding: 1.25rem 3.125rem;
-    height: 4.375rem;
+    height: 3.5rem;
     width: 100%;
     background-color: #414141;
     display: flex;
@@ -12,6 +12,8 @@
     box-shadow: 0rem 0rem 0.313rem #000;
     z-index: 1000;
 }
+
+
 
 .active-nav {
     text-decoration: underline !important;
@@ -32,6 +34,7 @@
     text-decoration: none;
     font-size: 28px;
     color: #FAF7FF;
+    white-space: nowrap;
 }
 .navbar a {
     padding: 0px 55px;
@@ -80,14 +83,144 @@
     padding: 1em;
     cursor: pointer;
 }
- 
-@media only screen and (max-width: 878px) {
+
+@media only screen and (max-width: 1200px) {
+    .nav-links {
+        width: 3rem;
+    }
+
     .navbar a {
         white-space: nowrap;
         padding: 0px 20px;
     }
 }
 
+@media only screen and (max-width: 1120px) {
+
+    .navigation {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .nav-links {
+        width: 8rem;
+    }
+
+    .navbar a {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 1075px) {
+    
+    .nav-links {
+        width: 3rem;
+    }
+
+    .navbar a {
+        white-space: nowrap;
+        padding: 0px 20px;
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 878px) {
+    .navigation {
+        position: fixed;
+        padding: 1.25rem 3.125rem;
+        width: 100%;
+        background-color: #414141;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+        box-shadow: 0rem 0rem 0.313rem #000;
+        z-index: 1000;
+    }
+    /* .nav-links {
+        width: 1.5rem;
+    }
+    .navbar a {
+        white-space: nowrap;
+        font-size: 1.15rem;
+    } */
+}
+
+@media only screen and (max-width: 850px) {
+    .nav-links {
+        width: 3rem;
+    }
+    .navbar a {
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 795px) {
+    .navbar {
+        justify-content: space-between;
+    }
+    .navbar a {
+        font-size: 1rem;
+    }
+
+    .navigation {
+        padding: 1.25rem 1.125rem;
+        width: 100%;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .navigation {
+        position: fixed;
+        width: 100%;
+        height: 2.5rem;
+        display: flex; /* Use flexbox for the main container */
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0.5rem 1rem; /* Increase padding for better spacing */
+        z-index: 1000;
+    }
+
+    .logo img {
+        width: 80px; /* Reduce image width to save space */
+    }
+
+    .navbar {
+        flex-grow: 1; /* Allow the navbar to take up available space */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly; /* Use space-around for even spacing */
+        align-items: center;
+    }
+
+    .navbar a {
+        padding: 0;
+        font-size: 1rem; /* Make font size slightly smaller */
+    }
+
+    .buttons {
+        flex-shrink: 0; /* Prevent the buttons container from shrinking */
+    }
+
+    .buttons button {
+        width: auto; 
+        height: 25px; 
+        padding: 5px 10px; 
+        font-size: 12px; 
+    }
+}
+
+@media screen and (min-width: 479px) and (max-width: 648px) {
+    .navbar a {
+        font-size: 0.8rem;
+    }
+
+    .navbar {
+        display: flex;
+        flex-flow: row;
+    }
+}
 @media only screen and (max-width: 480px) {
 
     #navigation-on, #navigation-off {
@@ -119,9 +252,6 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-    }
-    .navbar a {
-        width: 100%;
     }
 }
 

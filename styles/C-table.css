@@ -62,3 +62,31 @@ tbody th[scope="row"] {
   padding: 20px;
   box-shadow: '10px 10px 20px rgba(0, 0, 0, 1)';
 }
+
+@media only screen and (max-width: 480px) {
+  #tableContainer {
+    min-height: 200px;
+    width: calc(100% - 50px);
+    border-radius: 10px;
+  }
+
+
+  caption {
+    font-size: 10px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #f8f8f8;
+  }
+
+  td {
+    font-size: 15px;
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+  }
+}

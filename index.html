@@ -15,6 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
     <link rel="stylesheet" href="styles/C-table.css">
     <link rel="stylesheet" href="index.css">
@@ -24,7 +27,7 @@
     <script src="scripts/animation.js" defer></script>
 </head>
 <body>   
-        <div id="navigation" class="navigation"> 
+    <div id="navigation" class="navigation"> 
         <div class="logo">
             <a href="index.html">
                 <img src="images/logos/Logo A-Fashion Resized.png" alt="logo">
@@ -52,19 +55,24 @@
         <div class="drawer"></div>
     </div>
 
- 
     <div class="showcase">
         <div class="disblay">
 
-            <h3>
-                Unlock a World of Perfectly Fitting Clothe
-            </h3>
+            <div>
+                <h3>
+                    Unlock a World of Perfectly Fitting Clothe
+                </h3>
 
-            <h4>
-                Explore our diverse range of size charts, covering everything from everyday wear to specialized items. Say goodbye to ill-fitting garments and hello to a wardrobe that makes you feel amazing.
-            </h4>
+                <h4>
+                    Explore our diverse range of size charts, covering everything from everyday wear to specialized items. Say goodbye to ill-fitting garments and hello to a wardrobe that makes you feel amazing.
+                </h4>
+            </div>
 
-            <div id="carouselContainer" class="carousel"></div>
+            <div class="containerButtonCarousel">
+                <button class="arrow-left"></button>
+                <div id="carouselContainer" class="carousel"></div>
+                <button class="arrow-right"></button>
+            </div>
 
         </div>
         <div id="tableContainer" class="table"></div>
@@ -72,7 +80,7 @@
         <div>
             <button onclick="window.location.href='html/size.html';" id="cta" class="cta">Browse All Size Charts</button>
         </div>
-    </div> 
+    </div>
 
     <div class="services">
 
