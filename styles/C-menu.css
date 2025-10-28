@@ -83,26 +83,92 @@
     padding: 1em;
     cursor: pointer;
 }
- 
-@media only screen and (max-width: 878px) {
-    .navigation {
-    position: fixed;
-    padding: 1.25rem 3.125rem;
-    width: 100%;
-    background-color: #414141;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
-    box-shadow: 0rem 0rem 0.313rem #000;
-    z-index: 1000;
-}
+
+@media only screen and (max-width: 1200px) {
+    .nav-links {
+        width: 3rem;
+    }
+
     .navbar a {
         white-space: nowrap;
         padding: 0px 20px;
     }
 }
 
+@media only screen and (max-width: 1120px) {
+
+    .navigation {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .nav-links {
+        width: 8rem;
+    }
+
+    .navbar a {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 1075px) {
+    
+    .nav-links {
+        width: 3rem;
+    }
+
+    .navbar a {
+        white-space: nowrap;
+        padding: 0px 20px;
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 878px) {
+    .navigation {
+        position: fixed;
+        padding: 1.25rem 3.125rem;
+        width: 100%;
+        background-color: #414141;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+        box-shadow: 0rem 0rem 0.313rem #000;
+        z-index: 1000;
+    }
+    /* .nav-links {
+        width: 1.5rem;
+    }
+    .navbar a {
+        white-space: nowrap;
+        font-size: 1.15rem;
+    } */
+}
+
+@media only screen and (max-width: 850px) {
+    .nav-links {
+        width: 3rem;
+    }
+    .navbar a {
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 795px) {
+    .navbar {
+        justify-content: space-between;
+    }
+    .navbar a {
+        font-size: 1rem;
+    }
+
+    .navigation {
+        padding: 1.25rem 1.125rem;
+        width: 100%;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+    }
+}
 @media only screen and (max-width: 650px) {
     .navigation {
         position: fixed;
@@ -110,7 +176,7 @@
         height: 2.5rem;
         display: flex; /* Use flexbox for the main container */
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         padding: 0.5rem 1rem; /* Increase padding for better spacing */
         z-index: 1000;
@@ -124,12 +190,12 @@
         flex-grow: 1; /* Allow the navbar to take up available space */
         display: flex;
         flex-direction: row;
-        justify-content: space-around; /* Use space-around for even spacing */
+        justify-content: space-evenly; /* Use space-around for even spacing */
         align-items: center;
-        margin: 0 10px; /* Add some margin between the logo and button */
     }
 
     .navbar a {
+        padding: 0;
         font-size: 1rem; /* Make font size slightly smaller */
     }
 
@@ -138,10 +204,21 @@
     }
 
     .buttons button {
-        width: auto; /* Let the button's width be determined by its content */
-        height: 25px; /* Let the button's width be determined by its content */
-        padding: 5px 10px; /* Add padding for a good button size */
-        font-size: 12px; /* Reduce font size to fit on smaller screens */
+        width: auto; 
+        height: 25px; 
+        padding: 5px 10px; 
+        font-size: 12px; 
+    }
+}
+
+@media screen and (min-width: 479px) and (max-width: 648px) {
+    .navbar a {
+        font-size: 0.8rem;
+    }
+
+    .navbar {
+        display: flex;
+        flex-flow: row;
     }
 }
 @media only screen and (max-width: 480px) {
