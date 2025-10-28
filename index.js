@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initializeCarousel() {
+<<<<<<< HEAD
   const $carousel = $('#carouselContainer');
 
   // 🛑 Étape 1 : Attacher l'écouteur 'init' et 'afterChange'
@@ -21,9 +22,19 @@ function initializeCarousel() {
   });
   
   $carousel.on('afterChange', function(event, slick, currentSlide){
+=======
+  createHTMLCarrouselItemTables(itemsHomePage);
+
+  // ✅ Lier l’événement au bon conteneur
+  $('#carouselContainer').off('afterChange').on('afterChange', function(event, slick, currentSlide){
+>>>>>>> 595e9d4c371762a3218371f14baa92428e03fe0c
     updateActiveSlide(currentSlide, itemsHomePage);
   });
+  
+  // Initialiser la première table
+  updateActiveSlide(0, itemsHomePage);
 
+<<<<<<< HEAD
   // 2. Étape 2 : Appeler la fonction qui CRÉE le HTML et INITIALISE Slick
   // L'appel à .slick() dans cette fonction va maintenant trouver les écouteurs attachés ci-dessus.
   createHTMLCarrouselItemTables(itemsHomePage);
@@ -56,3 +67,35 @@ function updateActiveSlide(currentIndex, itemArray) {
     //addTableToHTML.addClass('.animateTable');
   }
 }
+=======
+  console.log("Carousel initialized:", $('#carouselContainer').length > 0);
+  $('#carouselContainer').on('init', function() {
+    console.log("Slick initialized");
+  });
+  $('#carouselContainer').on('afterChange', function(event, slick, currentSlide){
+    console.log("Slide changed to:", currentSlide);
+  });
+}
+
+function updateActiveSlide(currentIndex, itemArray) {
+  const $container = $('#carouselContainer');
+
+  // Si Slick n'est pas initialisé, on revient
+  if (!$container.hasClass('slick-initialized')) return;
+
+  // Récupérer l'instance Slick et ses slides réelles (jQuery collection)
+  const slick = $container.slick('getSlick');
+  if (!slick) return;
+
+  const $slides = $(slick.$slides); // slides "réelles" (sans clones)
+
+  // Retirer la classe sur toutes les vraies slides
+  $slides.removeClass('second');
+
+  // Mettre à jour la table (comme avant)
+  if (itemArray[currentIndex]) {
+    addTableToHTML(itemArray[currentIndex].Table);
+  }
+}
+
+>>>>>>> 595e9d4c371762a3218371f14baa92428e03fe0c

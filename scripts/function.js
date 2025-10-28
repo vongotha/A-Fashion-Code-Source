@@ -476,8 +476,14 @@ export function createHTMLCarrouselItemTables(listOfItems) {
     container.appendChild(lurre);
   });  
 
+<<<<<<< HEAD
   const $container = $('#carouselContainer');
   $container.slick({
+=======
+  setTimeout(() => {
+  const container = $('#carouselContainer');
+  container.slick({
+>>>>>>> 595e9d4c371762a3218371f14baa92428e03fe0c
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -485,6 +491,7 @@ export function createHTMLCarrouselItemTables(listOfItems) {
     autoplay: false,
   });
 
+<<<<<<< HEAD
   // 2. Attachement des gestionnaires de flèches (correctement)
   $('.arrow-left').off('click').on('click', () => {
     $container.slick('slickPrev');
@@ -496,6 +503,21 @@ export function createHTMLCarrouselItemTables(listOfItems) {
     // Ajouter ici votre logique d'animation de table
   });
 
+=======
+  console.log("Slick initialized. Slides:", container.slick('getSlick').slideCount);
+
+  $('.arrow-left').off('click').on('click', () => {
+    console.log("⬅️ arrow-left clicked");
+    container.slick('slickPrev');
+  });
+
+  $('.arrow-right').off('click').on('click', () => {
+    console.log("➡️ arrow-right clicked");
+    container.slick('slickNext');
+  });
+}, 100);
+
+>>>>>>> 595e9d4c371762a3218371f14baa92428e03fe0c
 }
 
 
