@@ -923,6 +923,21 @@ body, html {
         height: 35rem;
     }
 
+    .disblay {
+        height: 30rem;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    
+    .arrow-left, .arrow-right {
+        display: none;
+    }
+
+    .table {
+        transform: scale(0.4)
+    }
+
     .disblay h3 {
         font-size: 1.5rem;
     }
